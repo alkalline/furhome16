@@ -37,14 +37,16 @@
     #homepage-slider .homeslider-description h2 {
       font-size: 2.7em;
       color: white;
+      text-shadow: 1px 1px 2px black; /* */
       margin: 0;
       padding: 0; }
     #homepage-slider .homeslider-description p {
       width: 50%;
-      font-size: 1.15em;
+      font-size: 1.25em; /* 1.15em */
       line-height: 1.3em;
       padding: 0.5em 0;
-      color: white; }
+      color: white;
+      text-shadow: 1px 1px 2px black; } /* */
     #homepage-slider .homeslider-description button {
       font-size: 1.2em;
       text-transform: uppercase; }
@@ -118,9 +120,11 @@
     right: 60px;
     left: auto; }
     #homepage-slider .bx-wrapper .bx-prev:after {
-      content: "\f053"; }
+      content: "\f053";
+      text-shadow: 1px 1px 2px black; }
   #homepage-slider .bx-wrapper .bx-next:after {
-    content: "\f054"; }
+    content: "\f054";
+    text-shadow: 1px 1px 2px black; }
 
 .ie8 #homepage-slider .bx-wrapper .bx-controls-direction a:before {
   background: #333; }

@@ -1,6 +1,6 @@
 #languages-block-top {
   float: right;
-  border-left: 1px solid #515151;
+  border-left: 1px solid #333; /*#515151*/
   position: relative; }
   @media (max-width: 479px) {
     #languages-block-top {
@@ -26,7 +26,7 @@
       font-family: "FontAwesome";
       font-size: 18px;
       line-height: 18px;
-      color: #686666;
+      color: #e4dbd2; /* #686666 */
       vertical-align: -2px;
       padding-left: 12px; }
       @media (max-width: 479px) {
@@ -44,8 +44,9 @@
     top: 37px;
     left: 0;
     width: 157px;
-    background: #333;
-    z-index: 2; }
+    background: #eee; /* #333 */
+    z-index: 2;
+    border: 1px solid #333; }
     #languages-block-top ul li {
       color: #fff;
       line-height: 35px;
@@ -54,8 +55,9 @@
       #languages-block-top ul li > span {
         padding: 0 10px 0 12px;
         display: block;
-        color: #fff; }
+        color: #000; } /* #fff */
       #languages-block-top ul li.selected, #languages-block-top ul li:hover a {
-        background: #484848; }
+        background: #e4dbd2; /* #484848 */
+        color: #000; } /* */
 
 /*# sourceMappingURL=blocklanguages.css.map */
