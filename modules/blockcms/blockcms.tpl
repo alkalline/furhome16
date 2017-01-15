@@ -66,7 +66,7 @@
 	<!-- /Block CMS module -->
 {else}
 	<!-- Block CMS module footer -->
-	<section class="footer-block col-xs-12 col-sm-3" id="block_various_links_footer"> <!--col-sm-2-->
+	<section class="footer-block col-xs-12 col-sm-2" id="block_various_links_footer">
 		<h4>{l s='Information' mod='blockcms'}</h4>
 		<ul class="toggle-footer">
 			{if isset($show_price_drop) && $show_price_drop && !$PS_CATALOG_MODE}
@@ -97,14 +97,7 @@
 					</a>
 				</li>
 			{/if}
-			{if isset($show_contact) && $show_contact}
-			<li class="item">
-				<a href="{$link->getPageLink($contact_url, true)|escape:'html':'UTF-8'}" title="{l s='Contact us' mod='blockcms'}">
-					{l s='Contact us' mod='blockcms'}
-				</a>
-			</li>
-			{/if}
-			{foreach from=$cmslinks item=cmslink}
+			<!--{foreach from=$cmslinks item=cmslink}
 				{if $cmslink.meta_title != ''}
 					<li class="item">
 						<a href="{$cmslink.link|escape:'html':'UTF-8'}" title="{$cmslink.meta_title|escape:'html':'UTF-8'}">
@@ -112,7 +105,35 @@
 						</a>
 					</li>
 				{/if}
-			{/foreach}
+			{/foreach}-->
+			<!-- INFORMATION CATEGORY -->
+			<li class="item">
+				<a href="{$link->getCMSLink('4', 'fur-home')|escape:'html'}" title="{l s='About us' mod='blockcms'}">
+					{l s='About us' mod='blockcms'}
+				</a>
+			</li>
+			<li class="item">
+				<a href="{$link->getCMSLink('9', 'resellers-area')|escape:'html'}" title="{l s='Resellers area' mod='blockcms'}">
+					{l s='Resellers area' mod='blockcms'}
+				</a>
+			</li>
+			<li class="item">
+				<a href="{$link->getCMSLink('6', 'how-to-order')|escape:'html'}" title="{l s='How to order' mod='blockcms'}">
+					{l s='How to order' mod='blockcms'}
+				</a>
+			</li>
+			<li class="item">
+				<a href="{$link->getCMSLink('10', 'product-care')|escape:'html'}" title="{l s='Product care' mod='blockcms'}">
+					{l s='Product care' mod='blockcms'}
+				</a>
+			</li>
+			{if isset($show_contact) && $show_contact}
+			<li class="item">
+				<a href="{$link->getPageLink($contact_url, true)|escape:'html':'UTF-8'}" title="{l s='Contact us' mod='blockcms'}">
+					{l s='Contact us' mod='blockcms'}
+				</a>
+			</li>
+			{/if}
 			{if isset($show_sitemap) && $show_sitemap}
 			<li>
 				<a href="{$link->getPageLink('sitemap')|escape:'html':'UTF-8'}" title="{l s='Sitemap' mod='blockcms'}">
@@ -122,6 +143,41 @@
 			{/if}
 		</ul>
 		{$footer_text}
+	</section>
+	<section class="footer-block col-xs-12 col-sm-2" id="block_various_links_footer">
+		<h4>{l s='Support' mod='blockcms'}</h4>
+		<ul class="toggle-footer">
+<!--			{foreach from=$cmslinks item=cmslink}
+				{if $cmslink.meta_title != ''}
+					<li class="item">
+						<a href="{$cmslink.link|escape:'html':'UTF-8'}" title="{$cmslink.meta_title|escape:'html':'UTF-8'}">
+							{$cmslink.meta_title|escape:'html':'UTF-8'}
+						</a>
+					</li>
+				{/if}
+			{/foreach}-->
+			<!-- SUPPORT CATEGORY -->
+			<li class="item">
+				<a href="{$link->getCMSLink('5', 'secure-payment')|escape:'html'}" title="{l s='Secure payment' mod='blockcms'}">
+					{l s='Secure payment' mod='blockcms'}
+				</a>
+			</li>
+			<li class="item">
+				<a href="{$link->getCMSLink('8', 'warranty')|escape:'html'}" title="{l s='Warranty' mod='blockcms'}">
+					{l s='Warranty' mod='blockcms'}
+				</a>
+			</li>
+			<li class="item">
+				<a href="{$link->getCMSLink('1', 'delivery')|escape:'html'}" title="{l s='Delivery' mod='blockcms'}">
+					{l s='Delivery' mod='blockcms'}
+				</a>
+			</li>
+			<li class="item">
+				<a href="{$link->getCMSLink('3', 'terms-and-conditions-of-use')|escape:'html'}" title="{l s='Terms and conditions' mod='blockcms'}">
+					{l s='Terms and conditions' mod='blockcms'}
+				</a>
+			</li>
+		</ul>
 	</section>
 	{if $display_poweredby}
 	<section class="bottom-footer col-xs-12">

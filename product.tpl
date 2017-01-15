@@ -40,7 +40,7 @@
 		{if !$content_only}
 			<div class="container">
 				<div class="top-hr"></div>
-				<h1 itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
+				<h1 class="visible-xs" itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
 			</div>
 		{/if}
 		{if isset($adminActionDisplay) && $adminActionDisplay}
@@ -153,6 +153,7 @@
 		<!-- end left infos-->
 		<!-- center infos -->
 			<div class="pb-right-column col-xs-12 col-sm-5"> <!-- col-xs-12 col-sm-4 col-md-3 -->
+				<h1 class="hidden-xs" itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
 				{if ($product->show_price && !isset($restricted_country_mode)) || isset($groups) || $product->reference || (isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS)}
 				<!-- add to cart form-->
 				<form id="buy_block"{if $PS_CATALOG_MODE && !isset($groups) && $product->quantity > 0} class="hidden"{/if} action="{$link->getPageLink('cart')|escape:'html':'UTF-8'}" method="post">

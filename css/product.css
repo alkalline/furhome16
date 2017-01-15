@@ -29,7 +29,8 @@ a.fancybox-nav {
   outline: 0; }
 
 .primary_block h1 {
-  text-align: center;
+  font-size: 18px;
+  text-align: left;
   text-transform: uppercase; }
 
 /* .pb-left-column ***************************************************************************** */
@@ -42,7 +43,7 @@ a.fancybox-nav {
   background: #fff; }
   @media (max-width: 767px) {
     .pb-left-column #image-block {
-      width: 280px;
+      /*width: 280px;*/ /*gia kapoio logo periorizoun to plaisio sta 280px sta mobile */
       margin: 0 auto; } }
   .pb-left-column #image-block img {
     background: #fbfbfb;
@@ -422,9 +423,12 @@ span.view_scroll_spacer {
 
 .product_attributes,
 .box-cart-bottom {
-  -moz-box-shadow: inset 0 6px 6px rgba(0, 0, 0, 0.05);
+  /*-moz-box-shadow: inset 0 6px 6px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: inset 0 6px 6px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 6px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 6px 6px rgba(0, 0, 0, 0.05);*/
+  -moz-box-shadow: inset 0 1px 0px rgba(33, 33, 33, 0.05);
+  -webkit-box-shadow: inset 0 1px 0px rgba(33, 33, 33, 0.05);
+  box-shadow: inset 0 1px 0px rgba(33, 33, 33, 0.05);
   padding: 19px 19px 17px; }
 
 .box-cart-bottom {
@@ -438,8 +442,12 @@ span.view_scroll_spacer {
 .page-product-box .rte a.btn {
   text-decoration: none; }
 
-.box-info-product {
+.pb-right-column{ /* plaisio gyro apo to right-box gia na moiazei me tou archiproducts */
   background: #f6f6f6; /* #f6f6f6 */
+  border: 1px solid #eee; /* d2d0d0 */ }
+
+.box-info-product {
+  background: transparent; /* #f6f6f6 */
   border: 1px solid #eee; /* d2d0d0 */
   margin-bottom: 20px;
   /*border-top: 1px solid #b0afaf; <-- comment out */
