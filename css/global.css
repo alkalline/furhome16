@@ -239,10 +239,10 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;/*font-family: Arial, Helvetica, sans-serif;*/
   font-size: 16px; /*13px*/
   line-height: 1.42857;
-  color: #333; /*#777777*/
+  color: #111; /*#777777*/
   background-color: #fff; }
 
 input,
@@ -362,8 +362,8 @@ cite {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-family: 'Roboto', sans-serif; /*  font-family: Arial, Helvetica, sans-serif;*/
+  font-weight: 100; /*500*/
   line-height: 1.1; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
   .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
@@ -6142,7 +6142,8 @@ span.exclusive {
       border-color: #9e9e9e #c2c2c2 #c8c8c8 #c2c2c2; }
 
 .button.ajax_add_to_cart_button {
-  font: 700 17px/21px Arial, Helvetica, sans-serif;
+  font: 700 17px/21px 'Roboto', sans-serif;/*Arial, Helvetica, sans-serif;*/
+  font-weight: 100;
   color: #fff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
   padding: 0;
@@ -6167,7 +6168,9 @@ span.exclusive {
       background: #0084bf; }
 
 .button.lnk_view {
-  font: 700 17px/21px Arial, Helvetica, sans-serif;
+  /*font: 700 17px/21px Arial, Helvetica, sans-serif;*/
+  font: 700 17px/21px 'Roboto', sans-serif;/*Arial, Helvetica, sans-serif;*/
+  font-weight: 100;
   color: #333;
   text-shadow: 1px 1px white;
   padding: 0;
@@ -6272,7 +6275,7 @@ table.table_block td {
   white-space: nowrap; }
 
 .price.product-price {
-  font: 600 21px/26px "Open Sans", sans-serif;
+  font: 600 21px/26px 'Roboto', sans-serif;/*"Open Sans",*/
   color: #000; } /* #333 */
 
 .old-price {
@@ -6288,7 +6291,7 @@ table.table_block td {
 .price-percent-reduction {
   background: #f13340;
   border: 1px solid #d02a2c;
-  font: 600 21px/24px "Open Sans", sans-serif;
+  font: 600 21px/24px 'Roboto', sans-serif;/*"Open Sans"*/
   color: #fff;
   padding: 0 5px 0 3px;
   display: inline-block; }
@@ -6313,7 +6316,7 @@ table.table_block td {
   right: -5px; }
 
 .new-label {
-  font: 700 14px/12px Arial, Helvetica, sans-serif;
+  font: 700 14px/12px 'Roboto', sans-serif;/*Arial, Helvetica, sans-serif;*/
   color: #fff;
   background: #6ad4ff;
   text-transform: uppercase;
@@ -6359,7 +6362,7 @@ table.table_block td {
     transform: rotate(135deg); }
 
 .sale-label {
-  font: 700 14px/12px Arial, Helvetica, sans-serif;
+  font: 700 14px/12px 'Roboto', sans-serif;/*Arial, Helvetica, sans-serif;*/
   color: #fff;
   background: #f13340;
   text-transform: uppercase;
@@ -6467,7 +6470,7 @@ table.table_block td {
 
 #home-page-tabs {
   border: none;
-  background: #fff; } /* #fff */
+  background: #fff; }
   @media (min-width: 768px) {
     #home-page-tabs {
       padding: 10px 0;
@@ -6483,7 +6486,7 @@ table.table_block td {
       #home-page-tabs > li {
         width: 100%; } }
     #home-page-tabs > li a {
-      font: 600 21px/24px "Open Sans", sans-serif;
+      font: 600 21px/24px 'Roboto', sans-serif;/*"Open Sans"*/
       color: #333; /* #555454; */
       text-transform: uppercase;
       border: none;
@@ -6523,7 +6526,7 @@ table.table_block td {
 
 .block .title_block,
 .block h4 {
-  font: 600 18px/22px "Open Sans", sans-serif;
+  font: 600 18px/22px 'Roboto', sans-serif;/*"Open Sans"*/
   color: #555454;
   background: #f6f6f6;
   border-top: 5px solid #333;
@@ -6620,7 +6623,7 @@ table.table_block td {
   padding: 1px 6px; }
 
 .page-heading {
-  font: 600 18px/22px "Open Sans", sans-serif;
+  font: 600 18px/22px 'Roboto', sans-serif;/*"Open Sans"*/
   color: #555454;
   text-transform: uppercase;
   padding: 0px 0px 17px 0px;
@@ -6647,7 +6650,7 @@ table.table_block td {
     margin-bottom: 0; }
 
 .page-subheading {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;/*"Open Sans"*/
   font-weight: 600;
   text-transform: uppercase;
   color: #555454;
@@ -6660,7 +6663,7 @@ table.table_block td {
 h3.page-product-heading { /* "More Info" tab on product page */
   color: #555454;
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;/*"Open Sans"*/
   font-weight: 600;
   font-size: 18px;
   line-height: 20px;
@@ -7262,7 +7265,7 @@ div.star a:hover {
       .footer-container #footer a:hover {
         color: #000; } /* #fff*/
     .footer-container #footer h4 {
-      font: 600 18px/22px "Open Sans", sans-serif;
+      font: 600 18px/22px 'Roboto', sans-serif;/*"Open Sans"*/
       color: #000; /* #fff */
       margin: 0 0 13px 0;
       cursor: pointer; }
@@ -7534,11 +7537,11 @@ a.price_discount_delete {
 #cart_summary tfoot td.price {
   text-align: right; }
 #cart_summary tfoot td.total_price_container span {
-  font: 600 18px/22px "Open Sans", sans-serif;
+  font: 600 18px/22px 'Roboto', sans-serif;/*"Open Sans"*/
   color: #555454;
   text-transform: uppercase; }
 #cart_summary tfoot td#total_price_container {
-  font: 600 21px/25px "Open Sans", sans-serif;
+  font: 600 21px/25px 'Roboto', sans-serif;/*"Open Sans"*/
   color: #333;
   background: #fff; }
 
@@ -7625,7 +7628,7 @@ a.price_discount_delete {
 .cart_voucher {
   vertical-align: top !important; }
   .cart_voucher h4 {
-    font: 600 18px/22px "Open Sans", sans-serif;
+    font: 600 18px/22px 'Roboto', sans-serif;/*"Open Sans"*/
     color: #555454;
     text-transform: uppercase;
     padding: 7px 0 10px 0; }
@@ -8197,12 +8200,12 @@ table.discount i {
     #pagenotfound .pagenotfound .img-404 img {
       max-width: 100%; }
   #pagenotfound .pagenotfound h1 {
-    font: 600 28px/34px "Open Sans", sans-serif;
+    font: 600 28px/34px 'Roboto', sans-serif;/*"Open Sans"*/
     color: #333;
     text-transform: uppercase;
     margin-bottom: 7px; }
   #pagenotfound .pagenotfound p {
-    font: 600 16px/20px "Open Sans", sans-serif;
+    font: 600 16px/20px 'Roboto', sans-serif;/*"Open Sans"*/
     color: #555454;
     text-transform: uppercase;
     border-bottom: 1px solid #d6d4d4;
@@ -8410,7 +8413,7 @@ div.star.star_hover:after {
 #facebook_block h4 {
   padding: 35px 0 0 0;
   margin: 0 0 12px 0;
-  font: 300 21px/25px "Open Sans", sans-serif;
+  font: 300 21px/25px 'Roboto', sans-serif;/*"Open Sans"*/
   color: #6f6d6d; }
   @media (max-width: 991px) {
     #facebook_block h4 {
@@ -8474,7 +8477,7 @@ div.star.star_hover:after {
     overflow: hidden; }
   #cmsinfo_block h3 {
     margin: 0 0 5px 0;
-    font: 300 21px/25px "Open Sans", sans-serif;
+    font: 300 21px/25px 'Roboto', sans-serif;/*"Open Sans"*/
     color: #6f6d6d; }
     @media (max-width: 1199px) {
       #cmsinfo_block h3 {
