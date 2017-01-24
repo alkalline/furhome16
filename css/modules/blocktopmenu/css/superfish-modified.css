@@ -78,7 +78,7 @@
   .sf-menu > li > a {height: 60px; padding: 2px 5px; font-size: 13px;}
 }
 @media (min-width: 1200px){
-  .sf-menu > li {max-width: 140px; min-width: 92px;}
+  .sf-menu > li {max-width: 140px; min-width: 94px;}
   .sf-menu > li > a {height: 90px;}
 }
 
