@@ -5780,7 +5780,7 @@ header {
 #center_column .page_product_box h3 {
   color: #555454;
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif; /*font-family: "Open Sans", sans-serif;*/
   font-weight: 600;
   font-size: 18px;
   line-height: 20px;
@@ -6168,8 +6168,7 @@ span.exclusive {
       background: #0084bf; }
 
 .button.lnk_view {
-  /*font: 700 17px/21px Arial, Helvetica, sans-serif;*/
-  font: 700 17px/21px 'Roboto', sans-serif;/*Arial, Helvetica, sans-serif;*/
+  font: 700 17px/21px 'Roboto', sans-serif;   /*font: 700 17px/21px Arial, Helvetica, sans-serif;*/
   font-weight: 100;
   color: #333;
   text-shadow: 1px 1px white;
@@ -6362,7 +6361,7 @@ table.table_block td {
     transform: rotate(135deg); }
 
 .sale-label {
-  font: 700 14px/12px 'Roboto', sans-serif;/*Arial, Helvetica, sans-serif;*/
+  font: 100 14px/12px 'Roboto', sans-serif;/*700 14px/12px Arial, Helvetica, sans-serif;*/
   color: #fff;
   background: #f13340;
   text-transform: uppercase;

@@ -17,22 +17,19 @@
   border-bottom: 3px solid #eee;   /* 3px solid #e9e9e9 */
   background: #eee; }                 /* #f6f6f6 */
   @media (max-width: 767px) {
-    .sf-menu {
-      display: none; } }
+    .sf-menu {display: none;}
+  }
 
 .sf-menu ul {
   position: absolute;
   top: -999em;
   background: #fff; }
   @media (max-width: 767px) {
-    .sf-menu ul {
-      position: relative; } }
+    .sf-menu ul {position: relative;}
+  }
 
-.sf-menu ul li {
-  width: 100%; }
-
-.sf-menu li:hover {
-  visibility: inherit;
+.sf-menu ul li {width: 100%;}
+.sf-menu li:hover {visibility: inherit;
   /* fixes IE7 'sticky bug' */ }
 
 .sf-menu > li {
@@ -58,7 +55,8 @@
         .sf-menu > li span.active:after {
           content: "\f068"; } }
   .sf-menu > li > a {
-    font: 400 16px/18px "Open Sans", sans-serif; /* font: 600 18px/22px "Open Sans", sans-serif; */
+    font: 100 16px/18px 'Roboto', sans-serif; /* font: 600 18px/22px "Open Sans", sans-serif; */
+    text-align: center;
     text-transform: uppercase;
     color: #000; /* #484848 */
     display: block;
@@ -69,6 +67,20 @@
     background: #e4dbd2; /* #333 */
     border-bottom-color: #000;                    /* #666666 */
     color: #333; } /* #fff */
+
+/*dikh mou prosthiki gia pio mazemeno menu*/
+@media (min-width: 768px) and (max-width:991px) {
+  .sf-menu > li {max-width: 100px;}
+  .sf-menu > li > a {height: 45px; padding: 2px; font-size: 11px;}
+}
+@media (min-width: 992px) and (max-width:1199px) {
+  .sf-menu > li {max-width: 118px;}
+  .sf-menu > li > a {height: 60px; padding: 2px 5px; font-size: 13px;}
+}
+@media (min-width: 1200px){
+  .sf-menu > li {max-width: 140px; min-width: 92px;}
+  .sf-menu > li > a {height: 90px;}
+}
 
 .sf-menu li li li a {
   display: inline-block;
@@ -109,26 +121,20 @@
   -webkit-box-shadow: transparent 0px 0px 0px;
   box-shadow: transparent 0px 0px 0px; }
 
-.sf-menu li li li ul {
-  padding: 0 0 0 20px; }
-
-.sf-menu li li li ul {
-  width: 220px; }
+.sf-menu li li li ul {padding: 0 0 0 20px;}
+.sf-menu li li li ul {width: 220px;}
 
 ul.sf-menu li:hover li ul,
 ul.sf-menu li.sfHover li ul {
   top: -999em; }
-
 ul.sf-menu li li:hover ul,
 ul.sf-menu li li.sfHover ul {
   left: 200px;
   /* match ul width */
   top: 0; }
-
 ul.sf-menu li li:hover li ul,
 ul.sf-menu li li.sfHover li ul {
   top: -999em; }
-
 ul.sf-menu li li li:hover ul,
 ul.sf-menu li li li.sfHover ul {
   left: 200px;
@@ -140,7 +146,7 @@ ul.sf-menu li li li.sfHover ul {
   width: 100%; }
   .sf-menu > li > ul > li > a {
     text-transform: uppercase;
-    font: 600 16px/20px "Open Sans", sans-serif;
+    font: 600 16px/20px 'Roboto', sans-serif;
     color: #333; }
     .sf-menu > li > ul > li > a:hover {
       color: #515151; }
@@ -190,7 +196,7 @@ ul.sf-menu li li li.sfHover ul {
   @media (max-width: 767px) {
     .cat-title {
       display: block;
-      font: 600 18px/22px "Open Sans", sans-serif;
+      font: 600 18px/22px 'Roboto', sans-serif;
       text-transform: uppercase;
       color: #484848;
       display: block;
