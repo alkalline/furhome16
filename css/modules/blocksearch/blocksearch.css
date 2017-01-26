@@ -1,5 +1,10 @@
 #search_block_top {
-  padding-top: 50px; }
+  padding-top: 35px; } /*to ypsos pou emfanizetai h search bar, default 50px (to logo htan 15px)*/
+  @media (max-width:768px){
+    #search_block_top {
+      padding-top: 5px;
+    }
+  }
   #search_block_top #searchbox {
     float: left;
     width: 100%; }

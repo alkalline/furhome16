@@ -5,8 +5,8 @@
 
 .top-hr {
   background: #e4dbd2; /*#c4c4c4*/
-  height: 4px; /*5px*/
-  margin: 2px 0 31px; }
+  height: 0px; /*5px*/
+  margin: 2px 0 16px; }/*margin: 2px 0 31px;*/
 
 .product-heading-h5 {
   color: #999999;
