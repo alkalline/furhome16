@@ -5,6 +5,16 @@
   position: relative;
   float: right;
   padding-top: 35px; } /* to ypsos pou emfanizetai, gia eythigrammish me to logo. default 50, (to logo default htan 15)*/
+  @media (max-width:1200px){
+    #header .shopping_cart {
+      padding-top: 20px;
+    }
+  }
+  @media (max-width:992px){
+    #header .shopping_cart {
+      padding-top: 10px;
+    }
+  }
   @media (max-width:768px){
     #header .shopping_cart {
       padding-top: 5px;
