@@ -118,13 +118,13 @@
 				</a>
 			</li>
 			<li class="item">
-				<a href="{$link->getCMSLink('6', 'how-to-order')|escape:'html'}" title="{l s='How to order' mod='blockcms'}">
-					{l s='How to order' mod='blockcms'}
+				<a href="{$link->getCMSLink('10', 'product-care')|escape:'html'}" title="{l s='Product care' mod='blockcms'}">
+					{l s='Product care' mod='blockcms'}
 				</a>
 			</li>
 			<li class="item">
-				<a href="{$link->getCMSLink('10', 'product-care')|escape:'html'}" title="{l s='Product care' mod='blockcms'}">
-					{l s='Product care' mod='blockcms'}
+				<a href="{$link->getCMSLink('11', 'frequently-asked-questions')|escape:'html'}" title="{l s='Frequently Asked Questions' mod='blockcms'}">
+					{l s='Frequently Asked Questions' mod='blockcms'}
 				</a>
 			</li>
 			{if isset($show_contact) && $show_contact}
@@ -142,7 +142,7 @@
 			</li>
 			{/if}
 		</ul>
-		{$footer_text}
+		<!--{$footer_text}-->
 	</section>
 	<section class="footer-block col-xs-12 col-sm-2" id="block_various_links_footer">
 		<h4>{l s='Support' mod='blockcms'}</h4>
@@ -157,6 +157,11 @@
 				{/if}
 			{/foreach}-->
 			<!-- SUPPORT CATEGORY -->
+			<li class="item">
+				<a href="{$link->getCMSLink('6', 'how-to-order')|escape:'html'}" title="{l s='How to order' mod='blockcms'}">
+					{l s='How to order' mod='blockcms'}
+				</a>
+			</li>
 			<li class="item">
 				<a href="{$link->getCMSLink('5', 'secure-payment')|escape:'html'}" title="{l s='Secure payment' mod='blockcms'}">
 					{l s='Secure payment' mod='blockcms'}
