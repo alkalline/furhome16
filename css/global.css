@@ -2678,11 +2678,11 @@ input[type="button"].btn-block {
       color: #fff; }
 
 .breadcrumb {
-  padding: 8px 15px;
-  margin-bottom: 18px;
+  padding: 6px 10px;/*6 15*/
+  margin-bottom: 11px;
   list-style: none;
-  /*background-color: #e4dbd2;*/ /* #f6f6f6; */
-  border-radius: 0px; }
+  background-color: transparent ; /* #f6f6f6; */
+/*border-radius: 0px;*/ }
   .breadcrumb > li {
     display: inline-block; }
     .breadcrumb > li + li:before {
@@ -7172,7 +7172,7 @@ div.star a:hover {
   .breadcrumb a {
     display: inline-block;
     background: #fff;
-    padding: 0 15px 0 22px;
+    padding: 0 15px 0 10px; /*0 15 0 22*/
     margin-left: -26px;
     position: relative;
     z-index: 2;
@@ -7198,40 +7198,41 @@ div.star a:hover {
         vertical-align: -1px; }
       .breadcrumb a.home:before {
         border: none; }
-    .breadcrumb a:after { /*to trigonaki pou xwrizei to path*/
+  /*to trigonaki pou xwrizei to path, gia custom content*/
+    .breadcrumb a:after {
       display: inline-block;
-      content: ".";
-      position: absolute;
-      right: -10px;
+      content: "»";
+      /*position: absolute;*/
+      padding: 0 10px;
       top: 3px;
       width: 18px;
       height: 18px;
-      background: #fff;
-      border-right: 1px solid #d6d4d4;
-      border-top: 1px solid #d6d4d4;
-      /*border-radius: 2px;*/
-      text-indent: -5000px;
+      background: transparent;
+      /*border-right: 1px solid #d6d4d4;
+      /*border-top: 1px solid #d6d4d4;
+      /*border-radius: 2px;
+      /*text-indent: -5000px;*/
       z-index: -1;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg); }
+      /*-webkit-transform: rotate(45deg);
+      /*-ms-transform: rotate(45deg);
+    /*transform: rotate(45deg);*/}
     .breadcrumb a:before {
       display: inline-block;
-      content: ".";
-      position: absolute;
+      /*content: "»";
+      /*position: absolute;*/
       left: -10px;
       top: 3px;
       width: 18px;
       height: 18px;
       background: transparent;
-      border-right: 1px solid #d6d4d4;
+      /*border-right: 1px solid #d6d4d4;
       border-top: 1px solid #d6d4d4;
       border-radius: 2px;
-      text-indent: -5000px;
+      /*text-indent: -5000px;*/
       z-index: -1;
-      -webkit-transform: rotate(45deg);
+      /*-webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
-      transform: rotate(45deg); }
+    transform: rotate(45deg); */}
     .breadcrumb a:hover {
       color: #777777; }
 
