@@ -69,15 +69,17 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
-		<script type="text/javascript">{literal}
-				(window.gaDevIds=window.gaDevIds||[]).push('d6YPbH');
-				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-				ga('create', 'UA-21011140-1', 'auto');
-				ga('require', 'ec');{/literal}
-		</script>
+		<script>
+			{literal}
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-21011140-4', 'auto');
+		  ga('send', 'pageview');
+			{/literal}
+	</script>
 	</head>
 	<body{if isset($page_name)} id="{$page_name|escape:'html':'UTF-8'}"{/if} class="{if isset($page_name)}{$page_name|escape:'html':'UTF-8'}{/if}{if isset($body_classes) && $body_classes|@count} {implode value=$body_classes separator=' '}{/if}{if $hide_left_column} hide-left-column{else} show-left-column{/if}{if $hide_right_column} hide-right-column{else} show-right-column{/if}{if isset($content_only) && $content_only} content_only{/if} lang_{$lang_iso}">
 	{if !isset($content_only) || !$content_only}
@@ -125,9 +127,9 @@
 			</div>
 			<div class="columns-container">
 				<div id="columns" class="container">
-					{if $page_name !='index' && $page_name !='pagenotfound'}
+					{literal}<!--{if $page_name !='index' && $page_name !='pagenotfound'}
 						{include file="$tpl_dir./breadcrumb.tpl"}
-					{/if}
+					{/if}-->{/literal}
 					<div id="slider_row" class="row">
 						{capture name='displayTopColumn'}{hook h='displayTopColumn'}{/capture}
 						{if $smarty.capture.displayTopColumn}

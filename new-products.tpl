@@ -29,9 +29,8 @@
 
 {if $products}
 	<div class="content_sortPagiBar">
-    	<div class="sortPagiBar clearfix">
-			{include file="./product-sort.tpl"}
-			{include file="./nbr-product-page.tpl"}
+    	<div class="sortPagiBar clearfix" id="itemperpg">
+			{include file="./nbr-product-page.tpl"}{include file="./product-sort.tpl"}
 		</div>
     	<div class="top-pagination-content clearfix">
         	{include file="./product-compare.tpl"}
