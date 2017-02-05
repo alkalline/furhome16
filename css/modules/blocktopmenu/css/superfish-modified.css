@@ -10,7 +10,7 @@
     width: 100%; }}
 
 .sf-menu,
-.sf-menu * {margin: 0; padding: 0; list-style: none; border: 1px solid red;}
+.sf-menu * {margin: 0; padding: 0; list-style: none;}
 
 .sf-menu {
   position: relative;

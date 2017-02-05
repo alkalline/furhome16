@@ -40,17 +40,16 @@
     }
     #my-cart-box {
       padding-left: 15px;
-      padding-right: 15px;}
-  }
+      padding-right: 15px;}}
   @media (max-width: 480px) {
-    .shopping_cart {
-      padding-top: 20px; } }
+    .shopping_cart {padding-top: 20px;}}
   @media (max-width: 1200px) {
     .shopping_cart {
       margin: 0 auto;
       float: none;
       width: 100%; } }
 .shopping_cart > a:first-child { /*cart button on header*/
+  height: 47px;
   padding: 7px 10px 14px 16px;
   background: #e4dbd2; /*#333*/
   display: block;
@@ -60,7 +59,7 @@
   overflow: hidden; }
   @media (min-width: 768px) and (max-width: 991px) {
     .shopping_cart > a:first-child span.ajax_cart_product_txt, .shopping_cart > a:first-child span.ajax_cart_product_txt_s {
-      display: none !important; } }
+      display: none !important; }}
 .shopping_cart > a:first-child b {
   color: #fff;
   font: 600 16px/20px 'Roboto', sans-serif; /*font: 600 18px/22px "Open Sans", sans-serif;*/
@@ -73,6 +72,13 @@
   line-height: 23px;
   color: #000; /*#fff*/
   padding-right: 15px; }
+  @media (min-width: 768px) and (max-width: 991px) {
+  .shopping_cart > a:first-child:before { /*cart icon*/
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 20px;}
+  .shopping_cart > a:first-child b {
+    font: 400 16px/18px 'Roboto', sans-serif; /*font: 600 18px/22px "Open Sans", sans-serif;*/} }
 .shopping_cart .ajax_cart_total {
   display: none !important; }
 .shopping_cart .block_cart_expand:after, .shopping_cart .block_cart_collapse:after {
