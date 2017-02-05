@@ -35,7 +35,11 @@
 				<div class="footer-container">
 					<footer id="footer"  class="container">
 						<div class="row">{$HOOK_FOOTER}</div>
-						<p><span class="pull-left">&copy; 2017 Furhome.gr<br>Webdesign by A. Kallinikos</span><span class="pull-right"><img src="{$base_dir}/img/cc-logos.png"></span></p>
+						<div class="row">
+							<div class="col-xs-12">
+								<span class="pull-left" id="footer_cc_img"><img src="{$base_dir}/img/cc-logos.png"></span><p id="footer_copytext">&copy; 2017 Furhome.gr<br>Webdesign: A.Kallinikos</p>
+							</div>
+						</div>
 					</footer>
 				</div><!-- #footer -->
 			{/if}
