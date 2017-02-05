@@ -31,19 +31,19 @@
         <ul class="toggle-footer">
             {if $blockcontactinfos_company != ''}
             	<li>
-								<i class="icon-map-marker"></i>{$blockcontactinfos_company|escape:'html':'UTF-8'}<br>{if $blockcontactinfos_address != ''}{$blockcontactinfos_address|escape:'html':'UTF-8'}{/if}
+								<h3>{$blockcontactinfos_company|escape:'html':'UTF-8'}</h3><p><i class="icon-map-marker"></i>{if $blockcontactinfos_address != ''}{$blockcontactinfos_address|escape:'html':'UTF-8'}{/if}</p>
             	</li>
             {/if}
             {if $blockcontactinfos_phone != ''}
             	<li>
-            		<i class="icon-phone"></i>{l s='Call us now:' mod='blockcontactinfos'}
-            		<span>{$blockcontactinfos_phone|escape:'html':'UTF-8'}</span>
+            		<p><i class="icon-phone"></i>{l s='Call us now:' mod='blockcontactinfos'}
+            		{$blockcontactinfos_phone|escape:'html':'UTF-8'}</p>
             	</li>
             {/if}
             {if $blockcontactinfos_email != ''}
             	<li>
-            		<i class="icon-envelope-alt"></i>{l s='Email:' mod='blockcontactinfos'}
-            		<span>{mailto address=$blockcontactinfos_email|escape:'html':'UTF-8' encode="hex"}</span>
+            		<p><i class="icon-envelope-alt"></i>{l s='Email:' mod='blockcontactinfos'}
+            		{mailto address=$blockcontactinfos_email|escape:'html':'UTF-8' encode="hex"}</p>
             	</li>
             {/if}
         </ul>

@@ -32,10 +32,10 @@
 				</a>
 			</li>
 		{/if}
-		{if isset($twitter_url) && $twitter_url != ''}
-			<li class="twitter">
-				<a class="_blank" href="{$twitter_url|escape:html:'UTF-8'}">
-					<span>{l s='Twitter' mod='blocksocial'}</span>
+		{if isset($pinterest_url) && $pinterest_url != ''}
+			<li class="pinterest">
+				<a class="_blank" href="{$pinterest_url|escape:html:'UTF-8'}">
+					<span>{l s='Pinterest' mod='blocksocial'}</span>
 				</a>
 			</li>
 		{/if}
@@ -60,13 +60,13 @@
         		</a>
         	</li>
         {/if}
-        {if isset($pinterest_url) && $pinterest_url != ''}
-        	<li class="pinterest">
-        		<a class="_blank" href="{$pinterest_url|escape:html:'UTF-8'}">
-        			<span>{l s='Pinterest' mod='blocksocial'}</span>
-        		</a>
-        	</li>
-        {/if}
+				{if isset($twitter_url) && $twitter_url != ''}
+					<li class="twitter">
+						<a class="_blank" href="{$twitter_url|escape:html:'UTF-8'}">
+							<span>{l s='Twitter' mod='blocksocial'}</span>
+						</a>
+					</li>
+				{/if}
         {if isset($vimeo_url) && $vimeo_url != ''}
         	<li class="vimeo">
         		<a class="_blank" href="{$vimeo_url|escape:html:'UTF-8'}">
