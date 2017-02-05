@@ -333,7 +333,7 @@ header .row #header_logo,
   .col-sm-1 {width: 8.33333%; }
   .col-sm-2 {width: 16.66667%; }
   .col-sm-3 {width: 25%; }
-  .col-sm-4, header .row #header_logo {width: 33.33333%; }
+  .col-sm-4 {width: 33.33333%; } /*, header .row #header_logo*/
   .col-sm-5 {width: 41.66667%; }
   .col-sm-6 {width: 50%; }
   .col-sm-7 {width: 58.33333%; }

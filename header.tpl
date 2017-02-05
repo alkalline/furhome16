@@ -63,7 +63,6 @@
 			{/foreach}
 		{/if}
 		{$HOOK_HEADER}
-		<!--<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,600&amp;subset=latin,latin-ext" type="text/css" media="all" />-->
     <link href="//fonts.googleapis.com/css?family=Roboto:100,400&subset=cyrillic,greek" rel="stylesheet" type="text/css" media="all" />
 		<!--[if IE 8]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -104,7 +103,7 @@
 					{capture name='displayNav'}{hook h='displayNav'}{/capture}
 					{if $smarty.capture.displayNav}
 						<div class="nav">
-							<div class="container">
+							<div class="container-fluid">
 								<div class="row">
 									<nav>{$smarty.capture.displayNav}</nav>
 								</div>
@@ -112,14 +111,16 @@
 						</div>
 					{/if}
 					<div>
-						<div class="container">
+						<div class="container-fluid">
 							<div class="row">
-								<div id="header_logo">
+								<div id="header_logo" class="col-sm-3">
 									<a href="http://www.furhome.gr/"> <!--"{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}"-->
 										<img class="logo img-responsive" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"{if isset($logo_image_width) && $logo_image_width} width="{$logo_image_width}"{/if}{if isset($logo_image_height) && $logo_image_height} height="{$logo_image_height}"{/if}/>
 									</a>
 								</div>
-								{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+								<div class="col-sm-9">
+									{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+								</div>
 							</div>
 						</div>
 					</div>

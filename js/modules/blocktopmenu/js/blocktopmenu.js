@@ -37,10 +37,10 @@ $(document).ready(function(){
 // check resolution
 function responsiveMenu()
 {
-    if ($(window).width() <= 767 && responsiveflagMenu == false) {
+    if ($(window).width() <= 1067 && responsiveflagMenu == false) {/*767*/
         menuChange('enable');
         responsiveflagMenu = true;
-    } else if ($(window).width() >= 768) {
+    } else if ($(window).width() >= 1068) {/*768*/
         menuChange('disable');
         responsiveflagMenu = false;
     }
