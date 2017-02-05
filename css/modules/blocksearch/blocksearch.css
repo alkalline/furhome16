@@ -1,16 +1,9 @@
 #search_block_top {
+  margin-right: -15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
   padding-top: 10px;} /*to ypsos pou emfanizetai h search bar, default 50px (to logo htan 15px)*/
-/*  @media (max-width:1200px){
-    #search_block_top {
-      padding-top: 20px;
-    }
-  }
-  @media (max-width:992px){
-    #search_block_top {
-      padding-top: 10px;
-    }
-  }*/
-  @media (max-width:768px){
+  @media (max-width:767px){
     #search_block_top {width: 100%; clear: both; padding-top: 5px;}}
 #search_block_top #searchbox {float: left; width: 100%; }
 #search_block_top .btn.button-search {

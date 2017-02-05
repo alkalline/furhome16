@@ -6,7 +6,7 @@
   float: right;
   padding-bottom: 5px;
   padding-top: 10px; } /* to ypsos pou emfanizetai, gia eythigrammish me to logo. default 50, (to logo default htan 15)*/
-  @media (max-width:768px){
+  @media (max-width:767px){ /*(max-width:768px)*/
     #header .shopping_cart {
       clear: both;
       width: 100%;
@@ -23,8 +23,25 @@
   content: "\f0d8";
   padding: 4px 0px 2px 0px; }
 
+/*dikh mou prosthikh gia na mazepsw to margin*/
+#my-cart-box {
+  padding-left: 5px;
+  padding-right: 0;}
+
 .shopping_cart {
-  min-width: 270px; }
+  max-width: 270px;
+  width: 100%; }/*270px*/
+  @media (max-width:767px){
+    .shopping_cart {
+      clear: both;
+      max-width: 100%;
+      width: 100%;
+      padding-top: 5px;
+    }
+    #my-cart-box {
+      padding-left: 15px;
+      padding-right: 15px;}
+  }
   @media (max-width: 480px) {
     .shopping_cart {
       padding-top: 20px; } }
@@ -46,7 +63,7 @@
       display: none !important; } }
 .shopping_cart > a:first-child b {
   color: #fff;
-  font: 600 18px/22px 'Roboto', sans-serif; /*font: 600 18px/22px "Open Sans", sans-serif;*/
+  font: 600 16px/20px 'Roboto', sans-serif; /*font: 600 18px/22px "Open Sans", sans-serif;*/
   padding-right: 5px; }
 .shopping_cart > a:first-child:before { /*cart icon*/
   content: "\f07a";
