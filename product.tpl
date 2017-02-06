@@ -400,8 +400,9 @@
 				<!-- end center infos-->
 		</div> <!-- end pb-right-column-->
 	</div> <!-- end primary_block -->
+	<div id="sections">
 	{if !$content_only}
-{if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
+		{if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
 			<!-- quantity discount -->
 			<section class="page-product-box">
 				<h3 class="page-product-heading">{l s='Volume discounts'}</h3>
@@ -676,6 +677,7 @@
 			{/if}
 		{/if}
 	{/if}
+	</div>
 </div> <!-- itemscope product wrapper -->
 {strip}
 {if isset($smarty.get.ad) && $smarty.get.ad}
