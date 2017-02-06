@@ -39,7 +39,6 @@
 	<div class="primary_block row">
 		{if !$content_only}
 			<div class="container">
-				<div class="top-hr"></div>
 				<h1 class="visible-xs" itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
 			</div>
 		{/if}
