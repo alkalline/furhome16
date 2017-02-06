@@ -15,7 +15,6 @@
 .shop-phone strong {color: #fff; }
   @media (max-width: 991px) {
     .shop-phone.is_logged {display: none; } }
-
 #contact-link { /*'contact us' link right of the phone*/
   float: left; /*right*/
   border-left: 1px solid #333;  /* #515151 */
@@ -38,7 +37,6 @@
 #contact-link a:hover, #contact-link a.active {background: #2b2b2b; }
   @media (max-width: 767px) {
     #contact-link.is_logged {display: none; } }
-
   @media (max-width: 767px) {
     #contact_block {margin-bottom: 20px; } }
 #contact_block .label {display: none; }
