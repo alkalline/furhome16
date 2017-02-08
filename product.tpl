@@ -62,7 +62,7 @@
 			</p>
 		{/if}
 		<!-- left infos-->
-		<div class="pb-left-column col-xs-12 col-sm-9">
+		<div class="pb-left-column col-xs-12 col-sm-8 col-md-9">
 			<!-- product img-->
 			<div id="image-block" class="clearfix">
 				{if $product->new}
@@ -151,7 +151,7 @@
 		</div> <!-- end pb-left-column -->
 		<!-- end left infos-->
 		<!-- center infos -->
-			<div class="pb-right-column col-xs-12 col-sm-3"> <!-- col-xs-12 col-sm-4 col-md-3 -->
+			<div class="pb-right-column col-xs-12 col-sm-4 col-md-3"> <!-- col-xs-12 col-sm-4 col-md-3 -->
 				<h1 class="hidden-xs" itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
 				{if ($product->show_price && !isset($restricted_country_mode)) || isset($groups) || $product->reference || (isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS)}
 				<!-- add to cart form-->
@@ -400,7 +400,7 @@
 				<!-- end center infos-->
 		</div> <!-- end pb-right-column-->
 	</div> <!-- end primary_block -->
-	<div id="sections">
+	<div> <!-- id = sections -->
 	{if !$content_only}
 		{if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
 			<!-- quantity discount -->
@@ -489,7 +489,7 @@
 			<section class="page-product-box">
 				<h3 class="page-product-heading">{l s='More info'}</h3>
 				<!-- full description -->
-				<div  class="rte">{$product->description}</div>
+				<div class="rte">{$product->description}</div>
 			</section>
 			<!--end  More info -->
 		{/if}

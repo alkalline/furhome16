@@ -114,7 +114,7 @@
 			</li>
 			<li class="item">
 				<a href="{$link->getCMSLink('9', 'resellers-area')|escape:'html'}" title="{l s='Resellers area' mod='blockcms'}">
-					{l s='Resellers area' mod='blockcms'}
+					<strong>{l s='Wholesales & Affiliates' mod='blockcms'}</strong>
 				</a>
 			</li>
 			<li class="item">
