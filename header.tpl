@@ -113,13 +113,26 @@
 					<div>
 						<div class="container-fluid">
 							<div class="row">
-								<div id="header_logo" class="col-sm-3">
+								<div id="header_logo" class="col-sm-3 col-lg-2 clearfix">
 									<a href="http://www.furhome.gr/"> <!--"{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}"-->
 										<img class="logo img-responsive center-block" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"/>{literal}<!--{if isset($logo_image_width) && $logo_image_width} width="{$logo_image_width}"{/if}{if isset($logo_image_height) && $logo_image_height} height="{$logo_image_height}"{/if}/>-->{/literal}
 									</a>
 								</div>
-								<div class="col-sm-9">
-									{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+								<div id="header_menu" class="col-sm-6 col-lg-8 clearfix">
+									{literal}<!--{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}-->{/literal}
+									{if isset($HOOK_TOP)}{hook h='displayTop' mod='blocktopmenu'}{/if}
+								</div>
+								<div id="header_cart_search" class="col-sm-3 col-lg-2 clearfix">
+									<div class="row">
+										<div class="col-xs-12">
+											{if isset($HOOK_TOP)}{hook h='displayTop' mod='blockcart'}{/if}
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											{if isset($HOOK_TOP)}{hook h='displayTop' mod='blocksearch'}{/if}
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

@@ -2,8 +2,9 @@
 					Cart Block Styles
 ********************************************************************/
 #header .shopping_cart {
+  /*border: 1px solid green;*/
   position: relative;
-  float: right;
+  float: left;
   padding-bottom: 5px;
   padding-top: 10px; } /* to ypsos pou emfanizetai, gia eythigrammish me to logo. default 50, (to logo default htan 15)*/
   @media (max-width:767px){ /*(max-width:768px)*/
@@ -23,11 +24,6 @@
   content: "\f0d8";
   padding: 4px 0px 2px 0px; }
 
-/*dikh mou prosthikh gia na mazepsw to margin*/
-#my-cart-box {
-  padding-left: 5px;
-  padding-right: 0;}
-
 .shopping_cart {
   max-width: 270px;
   width: 100%; }/*270px*/
@@ -36,11 +32,7 @@
       clear: both;
       max-width: 100%;
       width: 100%;
-      padding-top: 5px;
-    }
-    #my-cart-box {
-      padding-left: 15px;
-      padding-right: 15px;}}
+      padding-top: 5px;}}
   @media (max-width: 480px) {
     .shopping_cart {padding-top: 20px;}}
   @media (max-width: 1200px) {
@@ -58,8 +50,7 @@
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden; }
   @media (min-width: 768px) and (max-width: 991px) {
-    .shopping_cart > a:first-child span.ajax_cart_product_txt, .shopping_cart > a:first-child span.ajax_cart_product_txt_s {
-      display: none !important; }}
+    .shopping_cart > a:first-child span.ajax_cart_product_txt, .shopping_cart > a:first-child span.ajax_cart_product_txt_s {display: none !important; }}
 .shopping_cart > a:first-child b {
   color: #fff;
   font: 600 16px/20px 'Roboto', sans-serif; /*font: 600 18px/22px "Open Sans", sans-serif;*/
