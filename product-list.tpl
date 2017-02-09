@@ -181,6 +181,13 @@
 								<span class="discount">{l s='Reduced price!'}</span>
 							{/if}
 					</div>
+					<a class="product_img_link" href="{$product.link|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}" itemprop="url">
+						<span class="availability">
+							<span class="label-success">
+								{l s='Order'}
+							</span>
+						</span>
+					</a>
 					{if (!$PS_CATALOG_MODE && $PS_STOCK_MANAGEMENT && ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
 						{if isset($product.available_for_order) && $product.available_for_order && !isset($restricted_country_mode)}
 							<span class="availability">
