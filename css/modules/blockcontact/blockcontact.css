@@ -12,7 +12,7 @@
   padding-right: 7px;
   position: relative; /* */
   top: 2px; } /* */
-.shop-phone strong {color: #fff; }
+.shop-phone strong, .shop-phone a {color: #fff; text-shadow: 1px 1px rgba(0, 0, 0, 0.2);}
   @media (max-width: 991px) {
     .shop-phone.is_logged {display: none; } }
 #contact-link { /*'contact us' link right of the phone*/

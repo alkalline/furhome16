@@ -31,13 +31,13 @@
         <ul class="toggle-footer">
             {if $blockcontactinfos_company != ''}
             	<li>
-								<h3>{$blockcontactinfos_company|escape:'html':'UTF-8'}</h3><p><i class="icon-map-marker"></i>{if $blockcontactinfos_address != ''}{$blockcontactinfos_address|escape:'html':'UTF-8'}{/if}</p>
+								<h3>{$blockcontactinfos_company|escape:'html':'UTF-8'}</h3><p><i class="icon-map-marker"></i>{if $blockcontactinfos_address != ''}<a href="https://goo.gl/maps/LmvmBBYvnKr" target="_blank" rel="nofollow">{$blockcontactinfos_address|escape:'html':'UTF-8'}</a>{/if}</p>
             	</li>
             {/if}
             {if $blockcontactinfos_phone != ''}
             	<li>
             		<p><i class="icon-phone"></i>{l s='Call us now:' mod='blockcontactinfos'}
-            		{$blockcontactinfos_phone|escape:'html':'UTF-8'}</p>
+            		<a href="tel:+302467024004">{$blockcontactinfos_phone|escape:'html':'UTF-8'}</a></p>
             	</li>
             {/if}
             {if $blockcontactinfos_email != ''}
