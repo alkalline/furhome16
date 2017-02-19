@@ -37,7 +37,7 @@
 						<div class="row">{$HOOK_FOOTER}</div>
 						<div class="row">
 							<div class="col-xs-12">
-								<span class="pull-left" id="footer_cc_img"><img src="{$base_dir}/img/cc-logos.png"></span><p id="footer_copytext">&copy; 2017 Furhome.gr<br>Webdesign: A.Kallinikos</p>
+								<span class="pull-left" id="footer_cc_img"><img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cc-logos.png"></span><p id="footer_copytext">&copy; 2017 FUR HOME<br>Webdesign: A.Kallinikos</p>
 							</div>
 						</div>
 					</footer>
