@@ -24,7 +24,7 @@
 *}
 <p class="buttons_bottom_block no-print">
 {if $wishlists|count == 1}
-	<a id="wishlist_button_nopop" href="#" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;" rel="nofollow"  title="{l s='Add to my wishlist' mod='blockwishlist'}">
+	<a id="wishlist_button_nopop" class="btn" href="#" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;" rel="nofollow"  title="{l s='Add to my wishlist' mod='blockwishlist'}">
 		{l s='Add to wishlist' mod='blockwishlist'}
 	</a>
 {else}
@@ -46,7 +46,7 @@
 			</div>
 		{/if}
 	{foreachelse}
-		<a href="#" id="wishlist_button_nopop" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;" rel="nofollow"  title="{l s='Add to my wishlist' mod='blockwishlist'}">
+		<a href="#" id="wishlist_button_nopop" class="btn" onclick="WishlistCart('wishlist_block_list', 'add', '{$id_product|intval}', $('#idCombination').val(), document.getElementById('quantity_wanted').value); return false;" rel="nofollow"  title="{l s='Add to my wishlist' mod='blockwishlist'}">
 			{l s='Add to wishlist' mod='blockwishlist'}
 		</a>
 	{/foreach}
