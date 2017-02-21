@@ -37,7 +37,7 @@
 						<div class="row">{$HOOK_FOOTER}</div>
 						<div class="row">
 							<div class="col-xs-12">
-								<span class="pull-left" id="footer_cc_img"><img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cc-logos.png"></span><p id="footer_copytext">&copy; 2017 FUR HOME<br>Webdesign: A.Kallinikos</p>
+								<span class="pull-left" id="footer_cc_img"><img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cc-logos.png" data-pin-nopin="true" alt="Credit Card logos"/></span><p id="footer_copytext">&copy; 2017 FUR HOME</p>
 							</div>
 						</div>
 					</footer>
@@ -46,5 +46,6 @@
 		</div><!-- #page -->
 {/if}
 {include file="$tpl_dir./global.tpl"}
+{literal}<!--<script async defer data-pin-hover="true" data-pin-round="true" data-pin-save="false" src="//assets.pinterest.com/js/pinit.js"></script>-->{/literal}
 	</body>
 </html>

@@ -302,6 +302,11 @@
 									</button>
 								</p>
 							</div>
+							<div>
+								<p class="buttons_bottom_block no-print">
+									<a href="tel:+302467024004" class="btn phoneorder">Order by phone</a>
+								</p>
+							</div>
 							{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}
 						</div> <!-- end box-cart-bottom -->
 					</div> <!-- end box-info-product -->

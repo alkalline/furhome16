@@ -22,7 +22,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e451d2', endColorstr='#ff74e5',GradientType=0 );
   background-position: 0 0;
   margin-bottom: 20px;}
-
 #wishlist_button:before, #wishlist_button_nopop:before {
   content: "\f08a";
   font: 400 21px/31px "FontAwesome";
@@ -36,7 +35,11 @@
   /*-moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;*/ }
-
+  @media (max-width: 991px) {
+    #wishlist_button_nopop {padding: 8px 12px 10px; text-align: left; font-size: 16px;}
+    #wishlist_button_nopop:before {display: none;}
+  }
+  
 /* wishlist block */
 #wishlist_block #wishlist_block_list {margin: 0 0 20px 0; }
 #wishlist_block #wishlist_block_list dl {font-weight: 400; }
