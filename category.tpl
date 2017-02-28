@@ -139,13 +139,14 @@
               {/if}
             {/strip}
           </span>
-          {if Tools::strlen($category->description) > 350}
+					<div class="rte">{$category->description}</div>
+          {literal}<!--{if Tools::strlen($category->description) > 350}
             <div id="category_description_short" class="rte">{$description_short}</div>
             <div id="category_description_full" class="unvisible rte">{$category->description}</div>
             <a href="{$link->getCategoryLink($category->id_category, $category->link_rewrite)|escape:'html':'UTF-8'}" class="lnk_more">{l s='More'}</a>
           {else}
             <div class="rte">{$category->description}</div>
-          {/if}
+          {/if}-->{/literal}
           </div>
         {/if}
       </div>

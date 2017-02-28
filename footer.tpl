@@ -46,6 +46,6 @@
 		</div><!-- #page -->
 {/if}
 {include file="$tpl_dir./global.tpl"}
-{literal}<!--<script async defer data-pin-hover="true" data-pin-round="true" data-pin-save="false" src="//assets.pinterest.com/js/pinit.js"></script>-->{/literal}
+	<script async defer data-pin-hover="true" data-pin-round="true" data-pin-save="false" src="https://www.furhome.gr/shop/js/pinit.js"></script>
 	</body>
 </html>

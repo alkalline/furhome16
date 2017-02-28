@@ -3522,9 +3522,7 @@ table.table_block td {
     .product-name a {font-size: 14px;}}
 
 .price {font-size: 13px; color: #777; white-space: nowrap; }
-.price.product-price {
-  font: 600 21px/26px 'Roboto', sans-serif;/*"Open Sans",*/
-  color: #000; } /* #333 */
+.price.product-price {font: 400 21px/26px 'Roboto', sans-serif; color: #000; }
 .old-price {color: #6f6f6f; text-decoration: line-through; }
 .old-price.product-price {font-size: 17px; }
 .special-price {color: #f13340; }

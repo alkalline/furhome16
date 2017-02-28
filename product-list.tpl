@@ -86,7 +86,6 @@
 													<link itemprop="availability" href="https://schema.org/InStock" />{if $product.quantity <= 0}{if $product.allow_oosp}{if isset($product.available_later) && $product.available_later}{$product.available_later}{else}{l s='In Stock'}{/if}{/if}{else}{if isset($product.available_now) && $product.available_now}{$product.available_now}{else}{l s='In Stock'}{/if}{/if}
 											{elseif (isset($product.quantity_all_versions) && $product.quantity_all_versions > 0)}
 													<link itemprop="availability" href="https://schema.org/LimitedAvailability" />{l s='Product available with different options'}
-
 											{else}
 													<link itemprop="availability" href="https://schema.org/OutOfStock" />{l s='Out of stock'}
 											{/if}
@@ -118,15 +117,6 @@
 							{$product.name|truncate:45:'...'|escape:'html':'UTF-8'}
 						</a>
 					</h5>
-					{capture name='displayProductListReviews'}{hook h='displayProductListReviews' product=$product}{/capture}
-					{if $smarty.capture.displayProductListReviews}
-						<div class="hook-reviews">
-						{hook h='displayProductListReviews' product=$product}
-						</div>
-					{/if}
-					<p class="product-desc" itemprop="description">
-						{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}
-					</p>
 					{if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
 					<div class="content_price">
 						{if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}
@@ -148,6 +138,15 @@
 							{hook h="displayProductPriceBlock" product=$product type="unit_price"}
 							{hook h="displayProductPriceBlock" product=$product type='after_price'}
 						{/if}
+						{capture name='displayProductListReviews'}{hook h='displayProductListReviews' product=$product}{/capture}
+						{if $smarty.capture.displayProductListReviews}
+							<div class="hook-reviews">
+							{hook h='displayProductListReviews' product=$product}
+							</div>
+						{/if}
+						<p class="product-desc" itemprop="description">
+							{$product.description_short|strip_tags:'UTF-8'|truncate:360:'...'}
+						</p>
 					</div>
 					{/if}
 					<div class="button-container">

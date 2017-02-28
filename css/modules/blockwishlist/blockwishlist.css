@@ -7,7 +7,6 @@
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  /*background-color: transparent;*/
   border-color: transparent;
   width: 100%;
   margin: auto;
@@ -26,20 +25,15 @@
   content: "\f08a";
   font: 400 21px/31px "FontAwesome";
   color: #fff;
-  /*background: #929292;*/
   width: 30px;
   text-align: center;
   display: inline-block;
   height: 30px;
-  margin: 0 6px 0 0;
-  /*-moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;*/ }
+  margin: 0 6px 0 0;}
   @media (max-width: 991px) {
     #wishlist_button_nopop {padding: 8px 12px 10px; text-align: left; font-size: 16px;}
-    #wishlist_button_nopop:before {display: none;}
-  }
-  
+    #wishlist_button_nopop:before {display: none;}}
+
 /* wishlist block */
 #wishlist_block #wishlist_block_list {margin: 0 0 20px 0; }
 #wishlist_block #wishlist_block_list dl {font-weight: 400; }
@@ -64,14 +58,8 @@
   height: 14px;
   float: right; }
 #wishlist_block .ajax_cart_block_remove_link:hover {color: #515151; }
-#wishlist_block .cart_block_product_name {
-  width: 85%;
-  display: inline-block;
-  font-weight: bold; }
-#wishlist_block .quantity-formated {
-  float: left;
-  margin: 0 5px 0 0;
-  width: 15px; }
+#wishlist_block .cart_block_product_name {width: 85%; display: inline-block; font-weight: bold; }
+#wishlist_block .quantity-formated {float: left; margin: 0 5px 0 0; width: 15px; }
 #wishlist_block_list .price {float: right; }
 
 /* page in my account ************************************************************************* */
@@ -80,11 +68,7 @@
 /* wishlistLinkTop */
 #module-blockwishlist-mywishlist #block-order-detail #hideSendWishlist {display: inline-block; }
 #module-blockwishlist-mywishlist .wishlistLinkTop ul.display_list {border-bottom: 1px solid #d6d4d4; margin-bottom: 20px; }
-#module-blockwishlist-mywishlist .wishlistLinkTop ul.display_list a {
-  display: inline-block;
-  color: #333;
-  margin: 10px 10px 10px 0px;
-  font-weight: bold; }
+#module-blockwishlist-mywishlist .wishlistLinkTop ul.display_list a {display: inline-block; color: #333; margin: 10px 10px 10px 0px; font-weight: bold; }
 #module-blockwishlist-mywishlist .wishlistLinkTop ul.display_list a:hover {color: #515151; }
 #module-blockwishlist-mywishlist .wishlistLinkTop li {float: left; }
 #module-blockwishlist-mywishlist .wishlistLinkTop #hideSendWishlist {float: right; }
@@ -93,21 +77,10 @@
 
 /* wlp_bought ****************************************** */
 /* wlp_bought_list */
-ul.wlp_bought_list li {
-  margin: 0 0 30px 0;
-  /*> 992px*/
-  /*768px x 991px*/ }
-ul.wlp_bought_list li .product_image {
-  padding: 9px;
-  border: 1px solid #d6d4d4;
-  margin: 0 0 20px 0;
-  max-width: 270px; }
-ul.wlp_bought_list li .product-name {
-  margin: 0 0 10px 0;
-  padding: 0 20px 0 0; }
-ul.wlp_bought_list li .product-name small {
-  display: block;
-  font-size: 11px; }
+ul.wlp_bought_list li {margin: 0 0 30px 0; /*> 992px*/ /*768px x 991px*/ }
+ul.wlp_bought_list li .product_image {padding: 9px; border: 1px solid #d6d4d4; margin: 0 0 20px 0; max-width: 270px; }
+ul.wlp_bought_list li .product-name {margin: 0 0 10px 0; padding: 0 20px 0 0; }
+ul.wlp_bought_list li .product-name small {display: block; font-size: 11px; }
 ul.wlp_bought_list li .product-name small a {font-size: 11px; }
 ul.wlp_bought_list li .product_infos {position: relative; }
 ul.wlp_bought_list li .btn_action .btn {margin: 0 0 10px 0; }
@@ -116,12 +89,7 @@ ul.wlp_bought_list li .btn_action .btn {margin: 0 0 10px 0; }
   @media (min-width: 768px) and (max-width: 991px) {
     ul.wlp_bought_list li.first-item-of-tablet-line {clear: left; } }
 .wishlistLinkTop .submit {margin: 0 0 30px 0; }
-ul.wlp_bought_list li .lnkdel {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  font-size: 14px; }
+ul.wlp_bought_list li .lnkdel {position: absolute; top: 0; right: 0; display: block; font-size: 14px; }
 #wishlist_button > .btn-group {width: 80%; }
 ul.product_list.grid > li .product-container .functional-buttons .wishlist .popover {padding: 0; min-width: 160px; }
 ul.product_list.grid > li .product-container .functional-buttons .wishlist .popover .popover-content {padding: 0; min-width: 158px; }
