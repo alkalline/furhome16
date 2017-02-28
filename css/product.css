@@ -831,6 +831,9 @@ Quick View Styles
   #product.content_only section.primary_block div.pb-right-column {width: 50%; float: left; }
   #product.content_only div.primary_block div.pb-right-column .box-info-product,
   #product.content_only section.primary_block div.pb-right-column .box-info-product {border-top-width: 1px; min-height: 1px; } }
+
+.padd-desc {padding: 5% !important;}
+
 /***** IE code ****/
 .ie8 .pb-left-column #image-block #view_full_size .span_link {background: #fff; border: 1px solid #d6d4d4;}
 .ie8 .box-security {filter: none;}
