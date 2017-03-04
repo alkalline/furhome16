@@ -1,20 +1,15 @@
 {*
 * 2007-2016 PrestaShop
-*
 * NOTICE OF LICENSE
 *
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
+* This source file is subject to the Academic Free License (AFL 3.0) that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL: http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to obtain it through the world-wide-web, please send an email
 * to license@prestashop.com so we can send you a copy immediately.
 *
 * DISCLAIMER
 *
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer versions in the future. If you wish to customize PrestaShop for your
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
@@ -317,32 +312,15 @@
 					{if $product->online_only}
 						<p class="online_only">{l s='Online only'}</p>
 					{/if}
-					<!--<h1 itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>-->
 					<p id="product_reference"{if empty($product->reference) || !$product->reference} style="display: none;"{/if}>
 						<label>{l s='Reference:'} </label>
 						<span class="editable" itemprop="sku"{if !empty($product->reference) && $product->reference} content="{$product->reference}"{/if}>{if !isset($groups)}{$product->reference|escape:'html':'UTF-8'}{/if}</span>
 					</p>
-{literal}<!--{if !$product->is_virtual && $product->condition}
-					<p id="product_condition">
-						<label>{l s='Condition:'} </label>
-						{if $product->condition == 'new'}
-							<link itemprop="itemCondition" href="https://schema.org/NewCondition"/>
-							<span class="editable">{l s='New product'}</span>
-						{elseif $product->condition == 'used'}
-							<link itemprop="itemCondition" href="https://schema.org/UsedCondition"/>
-							<span class="editable">{l s='Used'}</span>
-						{elseif $product->condition == 'refurbished'}
-							<link itemprop="itemCondition" href="https://schema.org/RefurbishedCondition"/>
-							<span class="editable">{l s='Refurbished'}</span>
-						{/if}
-					</p>
-					{/if}-->{/literal}
 					{if $product->description_short || $packItems|@count > 0}
 						<div id="short_description_block">
 							{if $product->description_short}
 								<div id="short_description_content" class="rte align_justify" itemprop="description">{$product->description_short}</div>
 							{/if}
-
 							{if $product->description}
 								<p class="buttons_bottom_block">
 									<a href="javascript:{ldelim}{rdelim}" class="button">
@@ -350,18 +328,7 @@
 									</a>
 								</p>
 							{/if}
-							<!--{if $packItems|@count > 0}
-								<div class="short_description_pack">
-								<h3>{l s='Pack content'}</h3>
-									{foreach from=$packItems item=packItem}
-
-									<div class="pack_content">
-										{$packItem.pack_quantity} x <a href="{$link->getProductLink($packItem.id_product, $packItem.link_rewrite, $packItem.category)|escape:'html':'UTF-8'}">{$packItem.name|escape:'html':'UTF-8'}</a>
-										<p>{$packItem.description_short}</p>
-									</div>
-									{/foreach}
-								</div>
-							{/if}-->
+							<link itemprop="itemCondition" href="https://schema.org/NewCondition"/>
 						</div> <!-- end short_description_block -->
 					{/if}
 					{if ($display_qties == 1 && !$PS_CATALOG_MODE && $PS_STOCK_MANAGEMENT && $product->available_for_order)}
@@ -390,9 +357,11 @@
 						{$HOOK_PRODUCT_OOS}
 					</div>
 					{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{$HOOK_EXTRA_RIGHT}{/if}
+					{literal}<!--{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{hook h='displayRightColumnProduct' mod='socialsharing'}{/if}-->{/literal}
 					{if !$content_only}
 						<!-- usefull links-->
 						<ul id="usefull_link_block" class="clearfix no-print">
+							<li>Share this item:</li>
 							{if $HOOK_EXTRA_LEFT}{$HOOK_EXTRA_LEFT}{/if}
 							<li class="print">
 								<a href="javascript:print();">
