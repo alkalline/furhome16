@@ -30,6 +30,9 @@
   display: inline-block;
   height: 30px;
   margin: 0 6px 0 0;}
+  @media (max-width: 1199px) {
+    #wishlist_button_nopop {padding: 8px 12px 10px; font-size: 16px;}
+    #wishlist_button_nopop:before {font-size: 16px;}}
   @media (max-width: 991px) {
     #wishlist_button_nopop {padding: 8px 12px 10px; text-align: left; font-size: 16px;}
     #wishlist_button_nopop:before {display: none;}}

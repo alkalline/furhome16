@@ -299,6 +299,11 @@
 							</div>
 							<div>
 								<p class="buttons_bottom_block no-print">
+									<button type="button" class="btn btnoffer" onclick="ga('send', 'event', 'button', 'click', 'offers');" data-toggle="popover" data-placement="bottom" title="Active offer" data-content="Use the code 17MARCH17 on the checkout screen and get 10% reduction. Valid until March 31.">Active offers</button>
+								</p>
+							</div>
+							<div>
+								<p class="buttons_bottom_block no-print">
 									<a href="tel:+302467024004" class="btn phoneorder">Order by phone</a>
 								</p>
 							</div>
