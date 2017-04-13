@@ -3087,9 +3087,10 @@ header .banner .row {margin: 0px;}
 header .nav {background: #333;} /**/
 header .nav .row {margin: 0px;}
 header .nav nav {width: 100%;}
-header .row {position: relative;}
+header .row {position: relative; margin:auto;}
 header .row > .container {position: relative;}
 header .row #header_logo {padding-top: 0px;} /**/
+#header_cart_search .row {margin: 0 -15px;} /* */ 
   @media (max-width: 992px) {
     header .row #header_logo {padding-top: 0px;}} /**/
   @media (max-width: 767px) {

@@ -81,7 +81,7 @@
 						{else}
 							<img id="bigpic" itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" width="{$largeSize.width}" height="{$largeSize.height}"/>
 							{if !$content_only}
-								<span class="span_link no-print">{l s='View larger'}</span>
+								<span class="span_link no-print hidden-xs">{l s='View larger'}</span>
 							{/if}
 						{/if}
 					</span>
@@ -147,6 +147,14 @@
 		<!-- end left infos-->
 		<!-- center infos -->
 			<div class="pb-right-column col-xs-12 col-sm-4 col-md-3"> <!-- col-xs-12 col-sm-4 col-md-3 -->
+				<div class="product-navigation clearfix" style="margin-bottom:20px">
+					{if $prev_product}
+						<a title="{$prev_product.name}" class="btn btn-default" href="{$link->getProductLink($prev_product.id_product, $prev_product.link_rewrite)}">{l s='Previous Product'}</a>
+					{/if}
+					{if $next_product}
+						<a title="{$next_product.name}" class="btn btn-default" style="float:right"href="{$link->getProductLink($next_product.id_product, $next_product.link_rewrite)}">{l s='Next Product'}</a>
+					{/if}
+				</div>
 				<h1 class="hidden-xs" itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
 				{if ($product->show_price && !isset($restricted_country_mode)) || isset($groups) || $product->reference || (isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS)}
 				<!-- add to cart form-->
@@ -299,15 +307,73 @@
 							</div>
 							<div>
 								<p class="buttons_bottom_block no-print">
-									<button type="button" class="btn btnoffer" onclick="ga('send', 'event', 'button', 'click', 'offers');" data-toggle="popover" data-placement="bottom" title="Active offer" data-content="Use the code 17MARCH17 on the checkout screen and get 10% reduction. Valid until March 31.">Active offers</button>
+									<button type="button" class="btn btnoffer" onclick="ga('send', 'event', 'button', 'click', 'offers');" data-toggle="popover" data-placement="bottom" title="{if $lang_iso=='el'}Προσφορά{elseif $lang_iso=='ru'}скидка{else}Active offer{/if}" data-content="{if $lang_iso=='el'}Πασχαλινή προσφορά: χρησιμοποιήστε τον κωδικό EASTRBNNY στο checkout για 15% έκπτωση (ισχύει έως 16 Απριλίου){else}Our Easter offer has arrived: use the code EASTRBNNY on checkout for a 15% price cut (active until April 16){/if}">{if $lang_iso=='el'}Προσφορά{elseif $lang_iso=='ru'}скидка{else}Active offer{/if}</button>
 								</p>
 							</div>
 							<div>
 								<p class="buttons_bottom_block no-print">
-									<a href="tel:+302467024004" class="btn phoneorder">Order by phone</a>
+									<a href="tel:+302467024004" class="btn phoneorder">{if $lang_iso=='el'}Τηλεφωνική Αγορά{elseif $lang_iso=='ru'}Заказ по телефону{else}Order by phone{/if}</a>
 								</p>
 							</div>
 							{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}
+							<div>
+									{if $lang_iso=='el'}
+										<ul class="p-askabout">
+											<li>Σας ενδιαφέρουν οι τιμές χονδρικής μας;</li>
+											<li>Θέλετε να μάθετε περισσότερα γι αυτό το προϊόν;</li>
+											<li><a href="{$link->getPageLink('contact')}?content_only=1" id="contact-us-popup">Επικοινωνήστε μαζί μας</a> και θα σας απαντήσουμε το συντομότερο δυνατόν.</li>
+										</ul>
+									{else}
+										<ul class="p-askabout">
+											<li>Interested about our wholesales prices?</li>
+											<li>Need more information about this product?</li>
+											<li><a href="{$link->getPageLink('contact')}?content_only=1" id="contact-us-popup">Contact us</a> and we will get back to you as soon as we can.</li>
+										</ul>
+									{/if}
+							</div>
+							<script type="text/javascript">
+								{literal}
+								$(document).ready(function(){
+									$('#contact-us-popup').fancybox({
+										type: 'ajax',
+										autoDimensions: false,
+										autoSize: false,
+										width: 600,
+										height: 'auto',
+										afterShow: function(obj) {
+											// not using ajax as it might have attachments
+											$('.contact-form-box').submit(function() {
+												$(this).find('.alert.alert-danger').remove();
+												var formdata = new FormData($(this)[0]);
+												formdata.append('submitMessage', 1);
+												var that = $(this);
+												$.ajax({
+													type: 'POST',
+													data: formdata,
+													url: $(this).attr('action'),
+													contentType: false,
+													processData: false,
+													success: function(data){
+														// we have an error
+														var error =  $($.parseHTML(data)).filter(".alert.alert-danger"); // all elements are at the same level, we need to parse the html
+														if(error.length >0)
+															that.prepend(error)
+														else {
+															// success!
+															var success =  $($.parseHTML(data)).filter(".alert.alert-success");
+															that.fadeOut('fast', function(){
+															$(this).after(success)
+															});
+														}
+													}
+												})
+												return false;
+											});
+										}
+									});
+								});
+								{/literal}
+								</script>
 						</div> <!-- end box-cart-bottom -->
 					</div> <!-- end box-info-product -->
 				</form>

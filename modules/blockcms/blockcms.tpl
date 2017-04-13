@@ -109,22 +109,26 @@
 			<!-- INFORMATION CATEGORY -->
 			<li class="item">
 				<a href="{$link->getCMSLink('4', 'fur-home')|escape:'html'}" title="{l s='About us' mod='blockcms'}">
-					{l s='About us' mod='blockcms'}
+					{if $lang_iso=='el'}Σχετικά με την FUR HOME{elseif $lang_iso=='ru'}О нас FUR HOME{else}About FUR HOME{/if}
+					{*{l s='About us' mod='blockcms'}*}
 				</a>
 			</li>
 			<li class="item">
 				<a href="{$link->getCMSLink('9', 'resellers-area')|escape:'html'}" title="{l s='Resellers area' mod='blockcms'}">
-					<strong>{l s='Wholesales & Affiliates' mod='blockcms'}</strong>
+					<strong>{if $lang_iso=='el'}Χονδρική & Μεταπωλητές{elseif $lang_iso=='ru'}Оптовики{else}Wholesales & Affiliates{/if}</strong>
+					{*{l s='Wholesales & Affiliates' mod='blockcms'}*}
 				</a>
 			</li>
 			<li class="item">
 				<a href="{$link->getCMSLink('10', 'product-care')|escape:'html'}" title="{l s='Product care' mod='blockcms'}">
-					{l s='Product care' mod='blockcms'}
+					{if $lang_iso=='el'}Περιποίηση Προϊόντων{elseif $lang_iso=='ru'}Уход за изделиями{else}Product care{/if}
+					{*{l s='Product care' mod='blockcms'}*}
 				</a>
 			</li>
 			<li class="item">
 				<a href="{$link->getCMSLink('11', 'frequently-asked-questions')|escape:'html'}" title="{l s='Frequently Asked Questions' mod='blockcms'}">
-					{l s='Frequently Asked Questions' mod='blockcms'}
+					{if $lang_iso=='el'}Συχνές Ερωτήσεις{elseif $lang_iso=='ru'}Часто задаваемые вопросы{else}Frequently Asked Questions{/if}
+					{*{l s='Frequently Asked Questions' mod='blockcms'}*}
 				</a>
 			</li>
 			{if isset($show_contact) && $show_contact}
@@ -145,7 +149,8 @@
 		<!--{$footer_text}-->
 	</section>
 	<section class="footer-block col-xs-12 col-sm-2" id="block_various_links_footer">
-		<h4>{l s='Support' mod='blockcms'}</h4>
+		<h4>{if $lang_iso=='el'}Υποστήριξη{elseif $lang_iso=='ru'}помощь{else}Support{/if}</h4>
+		{*<h4>{l s='Support' mod='blockcms'}</h4>*}
 		<ul class="toggle-footer">
 <!--			{foreach from=$cmslinks item=cmslink}
 				{if $cmslink.meta_title != ''}
@@ -159,27 +164,32 @@
 			<!-- SUPPORT CATEGORY -->
 			<li class="item">
 				<a href="{$link->getCMSLink('6', 'how-to-order')|escape:'html'}" title="{l s='How to order' mod='blockcms'}">
-					{l s='How to order' mod='blockcms'}
+					{if $lang_iso=='el'}Πως να παραγγείλετε{elseif $lang_iso=='ru'}Как сделать заказ{else}How to order{/if}
+					{*{l s='How to order' mod='blockcms'}*}
 				</a>
 			</li>
 			<li class="item">
 				<a href="{$link->getCMSLink('5', 'secure-payment')|escape:'html'}" title="{l s='Secure payment' mod='blockcms'}">
-					{l s='Secure payment' mod='blockcms'}
+					{if $lang_iso=='el'}Ασφαλείς Συναλλαγές{elseif $lang_iso=='ru'}Безопасная оплата{else}Secure payment{/if}
+					{*{l s='Secure payment' mod='blockcms'}*}
 				</a>
 			</li>
 			<li class="item">
 				<a href="{$link->getCMSLink('8', 'warranty')|escape:'html'}" title="{l s='Warranty' mod='blockcms'}">
-					{l s='Warranty' mod='blockcms'}
+					{if $lang_iso=='el'}Εγγύηση{elseif $lang_iso=='ru'}Гарантия{else}Warranty{/if}
+					{*{l s='Warranty' mod='blockcms'}*}
 				</a>
 			</li>
 			<li class="item">
 				<a href="{$link->getCMSLink('1', 'delivery')|escape:'html'}" title="{l s='Delivery' mod='blockcms'}">
-					{l s='Delivery' mod='blockcms'}
+					{if $lang_iso=='el'}Αποστολές{elseif $lang_iso=='ru'}Доставки{else}Delivery{/if}
+					{*{l s='Delivery' mod='blockcms'}*}
 				</a>
 			</li>
 			<li class="item">
 				<a href="{$link->getCMSLink('3', 'terms-and-conditions-of-use')|escape:'html'}" title="{l s='Terms and conditions' mod='blockcms'}">
-					{l s='Terms and conditions' mod='blockcms'}
+					{if $lang_iso=='el'}Όροι Χρήσης{elseif $lang_iso=='ru'}Правила и условия использования{else}Terms and conditions{/if}
+					{*{l s='Terms and conditions' mod='blockcms'}*}
 				</a>
 			</li>
 		</ul>
