@@ -1,27 +1,3 @@
-{*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
 <h2>{l s='Cart Summary'}</h2>
 {assign var='total_discounts_num' value="{if $total_discounts != 0}1{else}0{/if}"}
 {assign var='use_show_taxes' value="{if $use_taxes && $show_taxes}2{else}0{/if}"}
@@ -30,34 +6,31 @@
 {hook h="displayBeforeShoppingCartBlock"}
 <div id="order-detail-content" class="table_block table-responsive">
     <table id="cart_summary" class="table table-bordered {if $PS_STOCK_MANAGEMENT}stock-management-on{else}stock-management-off{/if}">
-        <thead>
+      <thead>
         <tr>
-            <th class="cart_product first_item">{l s='Product'}</th>
-            <th class="cart_description item">{l s='Description'}</th>
-            {if $PS_STOCK_MANAGEMENT}
-                {assign var='col_span_subtotal' value='3'}
-                {assign var='col_span_total' value='7'}
-                <th class="cart_avail item text-center">{l s='Availability'}</th>
-            {else}
-                {assign var='col_span_subtotal' value='2'}
-                {assign var='col_span_total' value='6'}
-            {/if}
-            <th class="cart_unit item text-right">{l s='Unit price'}</th>
-            <th class="cart_quantity item text-center">{l s='Qty'}</th>
-            <th colspan="{$col_span_subtotal}" class="cart_total item text-right">{l s='Total'}</th>
+          <th class="cart_product first_item">{l s='Product'}</th>
+          <th class="cart_description item">{l s='Description'}</th>
+          {if $PS_STOCK_MANAGEMENT}
+          {assign var='col_span_subtotal' value='3'}
+          {assign var='col_span_total' value='7'}
+          <th class="cart_avail item text-center">{l s='Availability'}</th>
+          {else}
+            {assign var='col_span_subtotal' value='2'}
+            {assign var='col_span_total' value='6'}
+          {/if}
+          <th class="cart_unit item text-right">{l s='Unit price'}</th>
+          <th class="cart_quantity item text-center">{l s='Qty'}</th>
+          <th colspan="{$col_span_subtotal}" class="cart_total item text-right">{l s='Total'}</th>
         </tr>
-        </thead>
-        <tfoot>
+      </thead>
+      <tfoot>
         {assign var='rowspan_total' value=2+$total_discounts_num+$total_wrapping_taxes_num}
-
         {if $use_taxes && $show_taxes && $total_tax != 0}
             {assign var='rowspan_total' value=$rowspan_total+1}
         {/if}
-
         {if $priceDisplay != 0}
             {assign var='rowspan_total' value=$rowspan_total+1}
         {/if}
-
         {if $total_shipping_tax_exc <= 0 && (!isset($isVirtualCart) || !$isVirtualCart) && $free_ship}
             {assign var='rowspan_total' value=$rowspan_total+1}
         {else}
@@ -71,27 +44,26 @@
                 {assign var='rowspan_total' value=$rowspan_total+1}
             {/if}
         {/if}
-
         {if $use_taxes}
             {if $priceDisplay}
                 <tr class="cart_total_price">
                     <td rowspan="{$rowspan_total}" colspan="3" id="cart_voucher" class="cart_voucher">
                         {if $voucherAllowed}
                             <form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">
-                                <fieldset>
-                                    <h4>{l s='Vouchers'}</h4>
-                                    <input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
-                                    <input type="hidden" name="submitDiscount" />
-                                    <button type="submit" name="submitAddDiscount" class="button btn btn-default button-small"><span>{l s='OK'}</span></button>
-                                </fieldset>
+                              <fieldset>
+                                <h4>{l s='Vouchers'}</h4>
+                                <input type="text" class="discount_name form-control" id="discount_name" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
+                                <input type="hidden" name="submitDiscount" />
+                                <button type="submit" name="submitAddDiscount" class="button btn btn-default button-small"><span>{l s='OK'}</span></button>
+                              </fieldset>
                             </form>
                             {if $displayVouchers}
-                                <p id="title" class="title-offers">{l s='Take advantage of our exclusive offers:'}</p>
-                                <div id="display_cart_vouchers">
-                                    {foreach $displayVouchers as $voucher}
-                                        {if $voucher.code != ''}<span class="voucher_name" data-code="{$voucher.code|escape:'html':'UTF-8'}">{$voucher.code|escape:'html':'UTF-8'}</span> - {/if}{$voucher.name}<br />
-                                    {/foreach}
-                                </div>
+                              <p id="title" class="title-offers">{l s='Take advantage of our exclusive offers:'}</p>
+                              <div id="display_cart_vouchers">
+                                {foreach $displayVouchers as $voucher}
+                                  {if $voucher.code != ''}<span class="voucher_name" data-code="{$voucher.code|escape:'html':'UTF-8'}">{$voucher.code|escape:'html':'UTF-8'}</span> - {/if}{$voucher.name}<br />
+                                {/foreach}
+                              </div>
                             {/if}
                         {/if}
                     </td>

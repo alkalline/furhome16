@@ -1,34 +1,8 @@
-{*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
-
 {if $opc}
 	{assign var="back_order_page" value="order-opc.php"}
-	{else}
+{else}
 	{assign var="back_order_page" value="order.php"}
 {/if}
-
 {if $PS_CATALOG_MODE}
 	{capture name=path}{l s='Your shopping cart'}{/capture}
 	<h2 id="cart_title">{l s='Your shopping cart'}</h2>
@@ -36,7 +10,6 @@
 {else}
 	{if $productNumber}
 		<!-- Shopping Cart -->
-
 		{include file="$tpl_dir./shopping-cart.tpl"}
 		<!-- End Shopping Cart -->
 		{if $is_logged AND !$is_guest}
@@ -49,7 +22,6 @@
 		<!-- Carrier -->
 		{include file="$tpl_dir./order-carrier.tpl"}
 		<!-- END Carrier -->
-	
 		<!-- Payment -->
 		{include file="$tpl_dir./order-payment.tpl"}
 		<!-- END Payment -->
@@ -94,7 +66,6 @@
 {addJsDefL name=txtInstantCheckout}{l s='Instant checkout' js=1}{/addJsDefL}
 {addJsDefL name=txtSelectAnAddressFirst}{l s='Please start by selecting an address.' js=1}{/addJsDefL}
 {addJsDefL name=txtFree}{l s='Free' js=1}{/addJsDefL}
-
 {capture}{if $back}&mod={$back|urlencode}{/if}{/capture}
 {capture name=addressUrl}{$link->getPageLink('address', true, NULL, 'back='|cat:$back_order_page|cat:'?step=1'|cat:$smarty.capture.default)|escape:'quotes':'UTF-8'}{/capture}
 {addJsDef addressUrl=$smarty.capture.addressUrl}

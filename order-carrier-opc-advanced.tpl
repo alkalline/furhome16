@@ -1,49 +1,25 @@
-{*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
 <div class="order_carrier_content box">
-    {if isset($virtual_cart) && $virtual_cart}
-        <input id="input_virtual_carrier" class="hidden" type="hidden" name="id_carrier" value="0" />
-    {else}
-        <div id="HOOK_BEFORECARRIER">
-            {if isset($carriers) && isset($HOOK_BEFORECARRIER)}
-                {$HOOK_BEFORECARRIER}
-            {/if}
-        </div>
-        {if isset($isVirtualCart) && $isVirtualCart}
-            <p class="alert alert-warning">{l s='No carrier is needed for this order.'}</p>
-        {else}
-            <div class="delivery_options_address">
-                {if isset($delivery_option_list)}
-                    {foreach $delivery_option_list as $id_address => $option_list}
-                        <p class="carrier_title">
-                            {if isset($address_collection[$id_address])}
-                                {l s='Choose a shipping option for this address:'} {$address_collection[$id_address]->alias}
-                            {else}
-                                {l s='Choose a shipping option'}
-                            {/if}
-                        </p>
+  {if isset($virtual_cart) && $virtual_cart}
+    <input id="input_virtual_carrier" class="hidden" type="hidden" name="id_carrier" value="0" />
+  {else}
+    <div id="HOOK_BEFORECARRIER">
+      {if isset($carriers) && isset($HOOK_BEFORECARRIER)}
+        {$HOOK_BEFORECARRIER}
+      {/if}
+    </div>
+      {if isset($isVirtualCart) && $isVirtualCart}
+        <p class="alert alert-warning">{l s='No carrier is needed for this order.'}</p>
+      {else}
+        <div class="delivery_options_address">
+          {if isset($delivery_option_list)}
+            {foreach $delivery_option_list as $id_address => $option_list}
+              <p class="carrier_title">
+                {if isset($address_collection[$id_address])}
+                  {l s='Choose a shipping option for this address:'} {$address_collection[$id_address]->alias}
+                {else}
+                  {l s='Choose a shipping option'}
+                {/if}
+              </p>
                         <div class="delivery_options">
                             {foreach $option_list as $key => $option}
                                 <div class="delivery_option {if ($option@index % 2)}alternate_{/if}item">

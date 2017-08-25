@@ -1,28 +1,3 @@
-{*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
-
 {if isset($no_follow) AND $no_follow}
 	{assign var='no_follow_text' value=' rel="nofollow"'}
 {else}
@@ -62,9 +37,9 @@
 					{if isset($tag) AND $tag AND !is_array($tag)}
 						<input type="hidden" name="tag" value="{$tag|escape:'html':'UTF-8'}" />
 					{/if}
-	                <button type="submit" class="btn btn-default button exclusive-medium">
-	                	<span>{l s='Show all'}</span>
-	                </button>
+            <button type="submit" class="btn btn-default button exclusive-medium">
+            	<span>{l s='Show all'}</span>
+            </button>
 					{if is_array($requestNb)}
 						{foreach from=$requestNb item=requestValue key=requestKey}
 							{if $requestKey != 'requestUrl' && $requestKey != 'p'}
@@ -72,7 +47,7 @@
 							{/if}
 						{/foreach}
 					{/if}
-	                <input name="n" id="nb_item{if isset($paginationId)}_{$paginationId}{/if}" class="hidden" value="{$nb_products}" />
+	        <input name="n" id="nb_item{if isset($paginationId)}_{$paginationId}{/if}" class="hidden" value="{$nb_products}" />
 				</div>
 			</form>
 		{/if}
@@ -189,19 +164,19 @@
     <div class="product-count">
     	{if ($n*$p) < $nb_products }
     		{assign var='productShowing' value=$n*$p}
-        {else}
-        	{assign var='productShowing' value=($n*$p-$nb_products-$n*$p)*-1}
-        {/if}
-        {if $p==1}
-        	{assign var='productShowingStart' value=1}
-        {else}
-        	{assign var='productShowingStart' value=$n*$p-$n+1}
-        {/if}
-        {if $nb_products > 1}
-        	{l s='Showing %1$d - %2$d of %3$d items' sprintf=[$productShowingStart, $productShowing, $nb_products]}
-		{else}
-        	{l s='Showing %1$d - %2$d of 1 item' sprintf=[$productShowingStart, $productShowing]}
-       	{/if}
+      {else}
+      	{assign var='productShowing' value=($n*$p-$nb_products-$n*$p)*-1}
+      {/if}
+      {if $p==1}
+      	{assign var='productShowingStart' value=1}
+      {else}
+      	{assign var='productShowingStart' value=$n*$p-$n+1}
+      {/if}
+      {if $nb_products > 1}
+      	{l s='Showing %1$d - %2$d of %3$d items' sprintf=[$productShowingStart, $productShowing, $nb_products]}
+			{else}
+      	{l s='Showing %1$d - %2$d of 1 item' sprintf=[$productShowingStart, $productShowing]}
+      {/if}
     </div>
 	<!-- /Pagination -->
 {/if}

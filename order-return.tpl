@@ -1,27 +1,3 @@
-{*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
 {include file="./errors.tpl"}
 {if isset($orderRet)}
 	<div class="box">
@@ -42,7 +18,6 @@
 			</thead>
 			<tbody>
 			{foreach from=$products item=product name=products}
-
 				{assign var='quantityDisplayed' value=0}
 				{foreach from=$returnedCustomizations item='customization' name=products}
 					{if $customization.product_id == $product.product_id}
@@ -78,7 +53,6 @@
 						{assign var='quantityDisplayed' value=$quantityDisplayed+$customization.product_quantity}
 					{/if}
 				{/foreach}
-
 				{if $product.product_quantity > $quantityDisplayed}
 					<tr class="{if $smarty.foreach.products.first}first_item{/if} {if $smarty.foreach.products.index % 2}alternate_item{else}item{/if}">
 						<td>{if $product.product_reference}{$product.product_reference|escape:'html':'UTF-8'}{else}--{/if}</td>
@@ -90,10 +64,9 @@
 			</tbody>
 		</table>
 	</div>
-
 	{if $orderRet->state == 2}
 	<div class="box">
-    	<h3 class="page-subheading">{l s='Reminder'}</h3>
+    <h3 class="page-subheading">{l s='Reminder'}</h3>
 		<ul>
 			<li>{l s='All merchandise must be returned in its original packaging and in its original state.'}</li>
 			<li>{l s='Please print out the'} <a href="{$link->getPageLink('pdf-order-return', true, NULL, "id_order_return={$orderRet->id|intval}")|escape:'html':'UTF-8'}">{l s='PDF return slip'}</a> {l s='and include it with your package.'}</li>
@@ -108,4 +81,3 @@
 		<p class="bold">{l s='You must wait for confirmation before returning any merchandise.'}</p>
 	{/if}
 {/if}
-

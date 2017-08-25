@@ -1,27 +1,3 @@
-{*
-* 2007-2014 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
 {include file="$tpl_dir./errors.tpl"}
 {if $errors|@count == 0}
 	{if !isset($priceDisplayPrecision)}
@@ -35,7 +11,6 @@
 		{assign var='productPriceWithoutReduction' value=$product->getPriceWithoutReduct(true, $smarty.const.NULL)}
 	{/if}
 <div itemscope itemtype="http://schema.org/Product">
-
 <div class="product-navigation clearfix" style="margin-bottom:20px">
 	{if $prev_product}
 		<a title="{$prev_product.name}" class="btn btn-default" href="{$link->getProductLink($prev_product.id_product, $prev_product.link_rewrite)}">{l s='Previous Product'}</a>
@@ -44,8 +19,6 @@
 		<a title="{$next_product.name}" class="btn btn-default" style="float:right"href="{$link->getProductLink($next_product.id_product, $next_product.link_rewrite)}">{l s='Next Product'}</a>
 	{/if}
 </div>
-
-
 
 	<div class="primary_block row">
 		{if !$content_only}

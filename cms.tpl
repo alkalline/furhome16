@@ -1,27 +1,3 @@
-{*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
 {if isset($cms) && !isset($cms_category)}
 	{if !$cms->active}
 		<br />
@@ -45,7 +21,7 @@
 		{if $cms_category->description}
 			<p>{$cms_category->description|escape:'html':'UTF-8'}</p>
 		{/if}
-		{if isset($sub_category) && !empty($sub_category)}	
+		{if isset($sub_category) && !empty($sub_category)}
 			<p class="title_block">{l s='List of sub categories in %s:' sprintf=$cms_category->name}</p>
 			<ul class="bullet list-group">
 				{foreach from=$sub_category item=subcategory}

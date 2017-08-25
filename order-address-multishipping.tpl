@@ -1,28 +1,3 @@
-{*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @version  Release: $Revision$
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
 {if !$opc}
 	{assign var='current_step' value='address'}
 	{capture name=path}{l s='Addresses'}{/capture}
@@ -31,7 +6,7 @@
 	{include file="$tpl_dir./order-steps.tpl"}
 	{include file="$tpl_dir./errors.tpl"}
 	{include file="$tpl_dir./order-address-multishipping-products.tpl"}
-		<form action="{$link->getPageLink('order', true, NULL, 'multi-shipping=1')|escape:'html':'UTF-8'}" method="post">
+	<form action="{$link->getPageLink('order', true, NULL, 'multi-shipping=1')|escape:'html':'UTF-8'}" method="post">
 {else}
 	{assign var="back_order_page" value="order-opc.php"}
 	<h1 class="page-heading step-num"><span>1</span> {l s='Addresses'}</h1>
@@ -41,7 +16,6 @@
 <div class="addresses clearfix">
 	<input type="hidden" name="id_address_delivery" id="id_address_delivery" value="{$cart->id_address_delivery}"/>
 	<p id="address_invoice_form" class="select" {if $cart->id_address_invoice == $cart->id_address_delivery}style="display: none;"{/if}>
-	
 	{if $addresses|@count >= 1}
     <div class="form-group selector1">
 		<label for="id_address_invoice" class="strong">{l s='Choose a billing address:'}</label>
@@ -56,10 +30,10 @@
 	{/if}
 	</p>
 	<div class="row">
-    	<div class="col-sm-12 col-md-6">
-            <ul class="address alternate_item {if $cart->isVirtualCart()}full_width{/if} box" id="address_invoice">
-            </ul>
-        </div>
+    <div class="col-sm-12 col-md-6">
+      <ul class="address alternate_item {if $cart->isVirtualCart()}full_width{/if} box" id="address_invoice">
+      </ul>
+    </div>
 	</div>
 	<p class="address_add submit">
 		<a href="{$link->getPageLink('address', true, NULL, "back={$back_order_page}?step=1{'&multi-shipping=1'|urlencode}{if $back}&mod={$back|urlencode}{/if}")|escape:'html':'UTF-8'}" title="{l s='Add'}" class="button button-small btn btn-default"><span>{l s='Add a new address'}<i class="icon-chevron-right right"></i></span></a>
@@ -80,7 +54,7 @@
 				{else}
 					<a href="{$link->getPageLink('order', true, NULL)|escape:'html':'UTF-8'}" title="{l s='Previous'}" class="button-exclusive btn btn-default"><i class="icon-chevron-left"></i>{l s='Continue Shopping'}</a>
 				{/if}
-		        <button type="submit" name="processAddress" class="button btn btn-default button-medium"><span>{l s='Proceed to checkout'}<i class="icon-chevron-right right"></i></span></button>
+		      <button type="submit" name="processAddress" class="button btn btn-default button-medium"><span>{l s='Proceed to checkout'}<i class="icon-chevron-right right"></i></span></button>
 			</p>
 		</form>
 {else}

@@ -1,22 +1,3 @@
-{*
-* 2007-2016 PrestaShop
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0) that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL: http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
-*  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*}
 {include file="$tpl_dir./errors.tpl"}
 {if $errors|@count == 0}
 	{if !isset($priceDisplayPrecision)}
@@ -232,7 +213,7 @@
 							</div>
 						</div>
 						{hook h="displayProductPriceBlock" product=$product type="weight" hook_origin='product_sheet'}
-												{hook h="displayProductPriceBlock" product=$product type="after_price"}
+						{hook h="displayProductPriceBlock" product=$product type="after_price"}
 						<div class="clear"></div>
 					</div> <!-- end content_prices -->
 					<div class="product_attributes clearfix">
@@ -325,19 +306,19 @@
 						</div>
 						{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}
 						<div>
-								{if $lang_iso=='el'}
-									<ul class="p-askabout">
-										<li>Σας ενδιαφέρουν οι τιμές χονδρικής μας;</li>
-										<li>Θέλετε να μάθετε περισσότερα γι αυτό το προϊόν;</li>
-										<li><a href="{$link->getPageLink('contact')}?content_only=1" id="contact-us-popup">Επικοινωνήστε μαζί μας</a> και θα σας απαντήσουμε το συντομότερο δυνατόν.</li>
-									</ul>
-								{else}
-									<ul class="p-askabout">
-										<li>Interested about our wholesales prices?</li>
-										<li>Need more information about this product?</li>
-										<li><a href="{$link->getPageLink('contact')}?content_only=1" id="contact-us-popup">Contact us</a> and we will get back to you as soon as we can.</li>
-									</ul>
-								{/if}
+							{if $lang_iso=='el'}
+								<ul class="p-askabout">
+									<li>Σας ενδιαφέρουν οι τιμές χονδρικής μας;</li>
+									<li>Θέλετε να μάθετε περισσότερα γι αυτό το προϊόν;</li>
+									<li><a href="{$link->getPageLink('contact')}?content_only=1" id="contact-us-popup">Επικοινωνήστε μαζί μας</a> και θα σας απαντήσουμε το συντομότερο δυνατόν.</li>
+								</ul>
+							{else}
+								<ul class="p-askabout">
+									<li>Interested about our wholesales prices?</li>
+									<li>Need more information about this product?</li>
+									<li><a href="{$link->getPageLink('contact')}?content_only=1" id="contact-us-popup">Contact us</a> and we will get back to you as soon as we can.</li>
+								</ul>
+							{/if}
 						</div>
 						<script type="text/javascript">
 							{literal}
@@ -402,9 +383,7 @@
 						{/if}
 						{if $product->description}
 							<p class="buttons_bottom_block">
-								<a href="javascript:{ldelim}{rdelim}" class="button">
-									{l s='More details'}
-								</a>
+								<a href="javascript:{ldelim}{rdelim}" class="button">{l s='More details'}</a>
 							</p>
 						{/if}
 						<link itemprop="itemCondition" href="https://schema.org/NewCondition"/>
