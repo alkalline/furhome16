@@ -1,8 +1,5 @@
 {*
-* 2007-2016 PrestaShop
-*
-* NOTICE OF LICENSE
-*
+* NOTICE OF LICENSE - 2007-2016 PrestaShop
 * This source file is subject to the Open Software License (OSL 3.0)
 * that is bundled with this package in the file LICENSE.txt.
 * It is also available through the world-wide-web at this URL:
@@ -12,11 +9,9 @@
 * to license@prestashop.com so we can send you a copy immediately.
 *
 * DISCLAIMER
-*
 * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
 * versions in the future. If you wish to customize PrestaShop for your
 * needs please refer to http://www.prestashop.com for more information.
-*
 *  @author PrestaShop SA <contact@prestashop.com>
 *  @copyright  2007-2016 PrestaShop SA
 *  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
@@ -24,14 +19,14 @@
 *}
 <!-- MODULE Block cart -->
 {if isset($blockcart_top) && $blockcart_top}
-<div class="col-xs-12 clearfix {if $PS_CATALOG_MODE}header_user_catalog{/if}">
+<div class="{if $PS_CATALOG_MODE}header_user_catalog{/if}">
 {/if}
 	<div class="shopping_cart">
 		<a href="{$link->getPageLink($order_process, true)|escape:'html':'UTF-8'}" title="{l s='View my shopping cart' mod='blockcart'}" rel="nofollow">
-			<b>{l s='Cart' mod='blockcart'}</b>
+			{literal}<!--<b>{l s='Cart' mod='blockcart'}</b>-->{/literal}
 			<span class="ajax_cart_quantity{if $cart_qties == 0} unvisible{/if}">{$cart_qties}</span>
-			<span class="ajax_cart_product_txt{if $cart_qties != 1} unvisible{/if}">{l s='Product' mod='blockcart'}</span>
-			<span class="ajax_cart_product_txt_s{if $cart_qties < 2} unvisible{/if}">{l s='Products' mod='blockcart'}</span>
+			{literal}<!--<span class="ajax_cart_product_txt{if $cart_qties != 1} unvisible{/if}">{l s='Product' mod='blockcart'}</span>-->{/literal}
+			{literal}<!--<span class="ajax_cart_product_txt_s{if $cart_qties < 2} unvisible{/if}">{l s='Products' mod='blockcart'}</span>-->{/literal}
 			<span class="ajax_cart_total{if $cart_qties == 0} unvisible{/if}">
 				{if $cart_qties > 0}
 					{if $priceDisplay == 1}
@@ -43,7 +38,7 @@
 					{/if}
 				{/if}
 			</span>
-			<span class="ajax_cart_no_product{if $cart_qties > 0} unvisible{/if}">{l s='(empty)' mod='blockcart'}</span>
+			<span class="ajax_cart_no_product{if $cart_qties > 0} unvisible{/if}">0{literal}<!--{l s='(empty)' mod='blockcart'}-->{/literal}</span>
 			{if $ajax_allowed && isset($blockcart_top) && !$blockcart_top}
 				<span class="block_cart_expand{if !isset($colapseExpandStatus) || (isset($colapseExpandStatus) && $colapseExpandStatus eq 'expanded')} unvisible{/if}">&nbsp;</span>
 				<span class="block_cart_collapse{if isset($colapseExpandStatus) && $colapseExpandStatus eq 'collapsed'} unvisible{/if}">&nbsp;</span>

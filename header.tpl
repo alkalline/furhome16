@@ -109,11 +109,6 @@
 								<div id="header_cart_search" class="col-sm-3 col-lg-2 clearfix">
 									<div class="row">
 										<div class="col-xs-12">
-											{if isset($HOOK_TOP)}{hook h='displayTop' mod='blockcart'}{/if}
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12">
 											{if isset($HOOK_TOP)}{hook h='displayTop' mod='blocksearch'}{/if}
 										</div>
 									</div>

@@ -3090,7 +3090,7 @@ header .nav nav {width: 100%;}
 header .row {position: relative; margin:auto;}
 header .row > .container {position: relative;}
 header .row #header_logo {padding-top: 0px;} /**/
-#header_cart_search .row {margin: 0 -15px;} /* */ 
+#header_cart_search .row {margin: 0 -15px;} /* */
   @media (max-width: 992px) {
     header .row #header_logo {padding-top: 0px;}} /**/
   @media (max-width: 767px) {
@@ -3656,6 +3656,11 @@ table.table_block td {
   margin: 0 0 30px 0;
   line-height: 23px; }
 .box p {margin-bottom: 0; }
+.box-promo p {font-size: 14px; padding-top: 5% !important;}
+  @media (max-width:1459px) {
+    .box-promo p {font-size: 12px;}
+  }
+.box-promo {margin: 0 0 15px 0;}
 .box.box-small {padding: 9px 10px 9px 20px; }
 .box.box-small .dark {
   padding-top: 10px;
@@ -5385,8 +5390,8 @@ div.star.star_hover:after {
 #product_comparison td.compare_extra_information {padding: 10px; }
 #product_comparison #social-share-compare {margin-bottom: 50px; }
 
-.btn-facebook, .btn-twitter, .btn-google-plus, .btn-pinterest {min-width: 38px; min-height: 38px;}
-.btn-facebook:hover, .btn-twitter:hover, .btn-google-plus:hover, .btn-pinterest:hover {border-color: #000;}
+.btn-facebook, .btn-twitter, .btn-google-plus, .btn-pinterest, #send_friend_button, #social-print-btn {min-width: 38px; min-height: 38px;}
+.btn-facebook:hover, .btn-twitter:hover, .btn-google-plus:hover, .btn-pinterest:hover, #send_friend_button:hover, #social-print-btn:hover {border-color: #000;}
 .btn-facebook i {color: #435f9f;}
 .btn-facebook:hover {color: #fff; background-color: #435f9f;}
 .btn-facebook:hover i {color: #fff; }
@@ -5399,6 +5404,10 @@ div.star.star_hover:after {
 .btn-pinterest i {color: #ce1f21;}
 .btn-pinterest:hover {color: #fff; background-color: #ce1f21;}
 .btn-pinterest:hover i {color: #fff;}
+#send_friend_button span {color: #000;}
+#send_friend_button:hover {background-color: #f58022;}
+#send_friend_button:hover span {color: #fff;}
+#social-print-btn span {color: #000;}
 
 .payment_option_form {display: none; }
 .payment_option_logo {

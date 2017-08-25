@@ -40,7 +40,6 @@
 								<span class="pull-left" id="footer_cc_img"><img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cc-logos.png" data-pin-nopin="true" alt="Credit Card logos"/></span>
 								<span class="pull-left">
 									<p id="footer_copytext">&copy; 2017 FUR HOME<br>
-									<!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=43391949&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/43391949/1_0_EEEEEEFF_EEEEEEFF_0_visits" style="width:80px; height:15px; border:0;" alt="Yandex.Metrica" title="Yandex.Metrica: data for today (visits)" /></a> <!-- /Yandex.Metrika informer --></p>
 								</span>
 							</div>
 						</div>
