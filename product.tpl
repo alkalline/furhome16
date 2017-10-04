@@ -296,73 +296,10 @@
 						</div>
 						<div>
 							<p class="buttons_bottom_block no-print">
-								<button type="button" class="btn btnoffer" onclick="ga('send', 'event', 'button', 'click', 'offers');" data-toggle="popover" data-placement="bottom" title="{if $lang_iso=='el'}Προσφορά{elseif $lang_iso=='ru'}скидка{else}Active offer{/if}" data-content="{if $lang_iso=='el'}Χρησιμοποιήστε τον κωδικό D8JP3BYW στο καλάθι σας και κερδίστε έκπτωση 30% στις αγορές χαλιών patchwork (η προσφορά ισχύει ΜΟΝΟ για τις 13-14 Ιουνίου).{else}Use the code D8JP3BYW on checkout and win 30% price reduction on patchwork rugs (this offer is valid ONLY during June 13-14).{/if}">{if $lang_iso=='el'}Προσφορά{elseif $lang_iso=='ru'}скидка{else}Active offer{/if}</button>
-							</p>
-						</div>
-						<div>
-							<p class="buttons_bottom_block no-print">
 								<a href="tel:+302467024004" class="btn phoneorder">{if $lang_iso=='el'}Τηλεφωνική Αγορά{elseif $lang_iso=='ru'}Заказ по телефону{else}Order by phone{/if}</a>
 							</p>
 						</div>
 						{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}
-						<div>
-							{if $lang_iso=='el'}
-								<ul class="p-askabout">
-									<li>Σας ενδιαφέρουν οι τιμές χονδρικής μας;</li>
-									<li>Θέλετε να μάθετε περισσότερα γι αυτό το προϊόν;</li>
-									<li><a href="{$link->getPageLink('contact')}?content_only=1" id="contact-us-popup">Επικοινωνήστε μαζί μας</a> και θα σας απαντήσουμε το συντομότερο δυνατόν.</li>
-								</ul>
-							{else}
-								<ul class="p-askabout">
-									<li>Interested about our wholesales prices?</li>
-									<li>Need more information about this product?</li>
-									<li><a href="{$link->getPageLink('contact')}?content_only=1" id="contact-us-popup">Contact us</a> and we will get back to you as soon as we can.</li>
-								</ul>
-							{/if}
-						</div>
-						<script type="text/javascript">
-							{literal}
-							$(document).ready(function(){
-								$('#contact-us-popup').fancybox({
-									type: 'ajax',
-									autoDimensions: false,
-									autoSize: false,
-									width: 600,
-									height: 'auto',
-									afterShow: function(obj) {
-										// not using ajax as it might have attachments
-										$('.contact-form-box').submit(function() {
-											$(this).find('.alert.alert-danger').remove();
-											var formdata = new FormData($(this)[0]);
-											formdata.append('submitMessage', 1);
-											var that = $(this);
-											$.ajax({
-												type: 'POST',
-												data: formdata,
-												url: $(this).attr('action'),
-												contentType: false,
-												processData: false,
-												success: function(data){
-													// we have an error
-													var error =  $($.parseHTML(data)).filter(".alert.alert-danger"); // all elements are at the same level, we need to parse the html
-													if(error.length >0)
-														that.prepend(error)
-													else {
-														// success!
-														var success =  $($.parseHTML(data)).filter(".alert.alert-success");
-														that.fadeOut('fast', function(){
-														$(this).after(success)
-														});
-													}
-												}
-											})
-											return false;
-										});
-									}
-								});
-							});
-							{/literal}
-							</script>
 					</div> <!-- end box-cart-bottom -->
 				</div> <!-- end box-info-product -->
 			</form>

@@ -20,6 +20,9 @@
 							</div>
 						</div>
 					</footer>
+					<div id="floating-buttons">
+						<a href="//www.furhome.gr/gift-voucher.php" class="btn" id="btn-float-offer" onclick="ga('send', 'event', 'button', 'click', 'offers');"><i class="icon-gift" aria-hidden="true"></i></a>  <a href="//www.furhome.gr/shop/en/contact-us" class="btn" id="btn-float-contact"><i class="icon-envelope" aria-hidden="true"></i></a>{literal}<!--  <a href="#top" class="btn" id="btn-float-top"><i class="icon-chevron-up" aria-hidden="true"></i></a>-->{/literal}
+					</div>
 				</div><!-- #footer -->
 			{/if}
 		</div><!-- #page -->
@@ -27,10 +30,5 @@
 {include file="$tpl_dir./global.tpl"}
 	<script async defer data-pin-hover="true" data-pin-tall="true" data-pin-lang="en" data-pin-save="true" src="//assets.pinterest.com/js/pinit.js"></script>
 	<script async src='https://www.google-analytics.com/analytics.js'></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('[data-toggle="popover"]').popover();
-		});
-	</script>
 	</body>
 </html>
