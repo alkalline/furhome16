@@ -184,7 +184,8 @@
 								{if $priceDisplay == 2}
 									<br />
 									<span id="pretaxe_price">{strip}
-										<span id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</span> {l s='tax excl.'}
+										<span id="pretaxe_price_display">{convertPrice price=$priceWithDiscountsWithoutTax}</span> {l s='tax excl.'}
+										{literal}<!--<span id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</span> {l s='tax excl.'}-->{/literal}
 									{/strip}</span>
 								{/if}
 							</div> <!-- end prices -->

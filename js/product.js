@@ -806,6 +806,7 @@ function updatePrice()
     }
     else{
       $('#our_price_display').text(formatCurrency(priceWithDiscountsDisplay, currencyFormat, currencySign, currencyBlank)).trigger('change');
+			$('#pretaxe_price_display').text(formatCurrency(priceWithDiscountsWithoutTax, currencyFormat, currencySign, currencyBlank)).trigger('change');
     }
 	}
 	else
