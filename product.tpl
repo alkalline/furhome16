@@ -208,7 +208,7 @@
 						<div class="row">
 							<div class="col-xs-3 col-sm-5 col-md-3" id="taxfreeblock"></div>
 							<div class="col-xs-9 col-sm-7 col-md-9">
-								<p id="pretaxe_price">TAX FREE for clients outside EU<br>{strip}
+								<p id="pretaxe_price">TAX FREE Shopping<br>(* for clients outside EU)<br>{strip}
 									<span id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</span> {l s='tax excl.'}
 								{/strip}</p>
 							</div>
