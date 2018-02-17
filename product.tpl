@@ -274,8 +274,8 @@
 													<ul>
 														{foreach from=$group.attributes key=id_attribute item=group_attribute}
 															<li>
-																<input type="radio" class="attribute_radio" name="{$groupName|escape:'html':'UTF-8'}" value="{$id_attribute}" {if ($group.default == $id_attribute)} checked="checked"{/if} />
-																<span>{$group_attribute|escape:'html':'UTF-8'}</span>
+																<label><input type="radio" class="attribute_radio" name="{$groupName|escape:'html':'UTF-8'}" value="{$id_attribute}" {if ($group.default == $id_attribute)} checked="checked"{/if} />
+																<span class="sizebtn">{$group_attribute|escape:'html':'UTF-8'}</span></label>
 															</li>
 														{/foreach}
 													</ul>
@@ -297,7 +297,7 @@
 						</div>
 						<div>
 							<p class="buttons_bottom_block no-print">
-								<a href="tel:+302467024004" class="btn phoneorder">{if $lang_iso=='el'}Τηλεφωνική Αγορά{elseif $lang_iso=='ru'}Заказ по телефону{else}Order by phone{/if}</a>
+								<a href="tel:+302467024004" class="btn phoneorder">{if $lang_iso=='el'}Καλέστε μας{elseif $lang_iso=='ru'}Заказ по телефону{else}Order by phone{/if}</a>
 							</p>
 						</div>
 						{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}
