@@ -274,7 +274,7 @@ span.view_scroll_spacer {float: left; width: 39px; padding-left: 12px;}
 #attributes .attribute_list .form-control {max-width: 230px;}
 #attributes .attribute_list .form-control option {background: #fff; color: #666;}
 #attributes .attribute_list ul {clear: both;}
-#attributes .attribute_list ul li {float: left; margin-right: 10px;}
+#attributes .attribute_list ul li {margin-right: 10px;} /*21/2/2018 - evgala to float:left oste na vgazei kathe megethos se ksexwristi grammi*/
 #attributes .attribute_list input.attribute_radio {float: left; margin-left: 3px;}
 #attributes .attribute_list div.radio,
 #attributes .attribute_list div.radio span,
