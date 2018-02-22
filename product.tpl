@@ -15,7 +15,9 @@
 	<div class="primary_block row">
 		{if !$content_only}
 			<div class="container">
-				<h1 class="visible-xs" itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
+				<div class="col-xs-12">
+					<h1 class="visible-xs" itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
+				</div>
 			</div>
 		{/if}
 		{if isset($adminActionDisplay) && $adminActionDisplay}
@@ -128,13 +130,36 @@
 		<!-- end left infos-->
 		<!-- center infos -->
 		<div class="pb-right-column col-xs-12 col-sm-5 col-md-4"> <!-- col-xs-12 col-sm-4 col-md-3 -->
+			<div class="row">
 			<div class="product-navigation clearfix" style="margin-bottom:20px">
-				{if $prev_product}
-					<a title="{$prev_product.name}" class="btn btn-default" href="{$link->getProductLink($prev_product.id_product, $prev_product.link_rewrite)}">{l s='Previous Product'}</a>
-				{/if}
-				{if $next_product}
-					<a title="{$next_product.name}" class="btn btn-default" style="float:right"href="{$link->getProductLink($next_product.id_product, $next_product.link_rewrite)}">{l s='Next Product'}</a>
-				{/if}
+				<div class="col-xs-4">
+					{if $prev_product}
+						<a title="{$prev_product.name}" id="prevprod" class="btn btn-default" href="{$link->getProductLink($prev_product.id_product, $prev_product.link_rewrite)}">{l s='Previous Product'} <span class="icon-chevron-left hidden-xs"></span></a>
+					{/if}
+				</div>
+				<div class="col-xs-4">
+					<!-- Social share button dropdown -->
+					<div class="btn-group" id="shareprod">
+	  				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    				Share this item <span class="icon-share-alt hidden-xs"></span>
+	  				</button>
+						<!-- Edw vazw to Useful Links section (357) -->
+						<ul id="usefull_link_block" class="dropdown-menu">
+							{if $HOOK_EXTRA_LEFT}{$HOOK_EXTRA_LEFT}{/if}
+							<li class="print">
+								<a class="btn btn-default social-share" id="social-print-btn" href="javascript:print();">
+									<span class="icon-print"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					{if $next_product}
+						<a title="{$next_product.name}" id="nextprod" class="btn btn-default" href="{$link->getProductLink($next_product.id_product, $next_product.link_rewrite)}">{l s='Next Product'} <span class="icon-chevron-right hidden-xs"></span></a>
+					{/if}
+				</div>
+			</div>
 			</div>
 			<h1 class="hidden-xs" itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
 			{if ($product->show_price && !isset($restricted_country_mode)) || isset($groups) || $product->reference || (isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS)}
@@ -356,15 +381,15 @@
 				{literal}<!--{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{hook h='displayRightColumnProduct' mod='socialsharing'}{/if}-->{/literal}
 				{if !$content_only}
 					<!-- usefull links-->
-					<ul id="usefull_link_block" class="clearfix no-print">
+					{literal}<!--<ul id="usefull_link_block" class="clearfix no-print">
 						<li>Share this item:</li>
 						{if $HOOK_EXTRA_LEFT}{$HOOK_EXTRA_LEFT}{/if}
 						<li class="print">
 							<a class="btn btn-default social-share" id="social-print-btn" href="javascript:print();">
-								{literal}<!--{l s='Print'}-->{/literal}<span class="icon-print"></span>
+								<span class="icon-print"></span>
 							</a>
 						</li>
-					</ul>
+					</ul>-->{/literal}{literal}<!--<span class="icon-print">{l s='Print'}</span>-->{/literal}
 				{/if}
 			</div>
 			<!-- end center infos-->

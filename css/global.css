@@ -5389,8 +5389,7 @@ div.star.star_hover:after {
 #product_comparison td.compare_extra_information {padding: 10px; }
 #product_comparison #social-share-compare {margin-bottom: 50px; }
 
-.btn-facebook, .btn-twitter, .btn-google-plus, .btn-pinterest, #send_friend_button, #social-print-btn {min-width: 38px; min-height: 38px;}
-.btn-facebook:hover, .btn-twitter:hover, .btn-google-plus:hover, .btn-pinterest:hover, #send_friend_button:hover, #social-print-btn:hover {border-color: #000;}
+.btn-facebook, .btn-twitter, .btn-google-plus, .btn-pinterest, #send_friend_button, #social-print-btn {min-width: 40px; min-height: 40px; border:0; font-size: 20px;}
 .btn-facebook i {color: #435f9f;}
 .btn-facebook:hover {color: #fff; background-color: #435f9f;}
 .btn-facebook:hover i {color: #fff; }
@@ -5403,10 +5402,12 @@ div.star.star_hover:after {
 .btn-pinterest i {color: #ce1f21;}
 .btn-pinterest:hover {color: #fff; background-color: #ce1f21;}
 .btn-pinterest:hover i {color: #fff;}
-#send_friend_button span {color: #000;}
+#send_friend_button span {color: #000;padding-top: 4px;}
 #send_friend_button:hover {background-color: #f58022;}
-#send_friend_button:hover span {color: #fff;}
-#social-print-btn span {color: #000;}
+#send_friend_button:hover span {color: #fff;text-shadow: 0px 0px 0px #fff;}
+#social-print-btn span {color: #000; padding-top: 4px;}
+#social-print-btn:hover {background-color: #777;}
+#social-print-btn:hover span {color: #fff;text-shadow: 0px 0px 0px #fff;}
 
 .payment_option_form {display: none; }
 .payment_option_logo {
