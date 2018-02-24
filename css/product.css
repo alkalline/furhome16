@@ -567,15 +567,16 @@ span.view_scroll_spacer {float: left; width: 39px; padding-left: 12px;}
 
 .p-askabout{padding: 5px; list-style: square; list-style-position: inside;}
 .product-navigation{padding-top: 15px; width: 100%;}
+.product-navigation div {margin-left: 0; margin-right: 0;}
 #prevprod {min-width: 100%;}
 #shareprod {min-width: 100%;}
 #shareprod > button {min-width: 100%;}
 #nextprod {min-width: 100%;}
 @media (max-width:768px){
-  #prevprod {font-size: 11px;}
-  #shareprod {font-size: 11px;}
-  #shareprod > button {font-size: 11px;}
-  #nextprod {font-size: 11px;}
+  #prevprod {font-size: 11px;padding-left: 6px;padding-right: 6px;}
+  #shareprod {font-size: 11px;padding-left: 0px;padding-right: 0px;}
+  #shareprod > button {font-size: 11px;padding-left: 6px;padding-right: 6px;}
+  #nextprod {font-size: 11px;padding-left: 6px;padding-right: 6px;}
 }
 @media (min-width:768px) and (max-width:1199px){
   #prevprod {min-width: 100%; font-size: 11px;}
