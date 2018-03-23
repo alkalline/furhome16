@@ -378,7 +378,7 @@
 					{$HOOK_PRODUCT_OOS}
 				</div>
 				<div class="rte align_justify">
-					<ul>
+					<ul class="text-center">
 						{if $lang_iso=='el'}<li>Τηλεφωνήστε μας για καλύτερη τιμή & ημ/νία παράδοσης</li>{/if}
 						<li>{if $lang_iso=='el'}Ράβουμε σε ότι διάσταση και σχήμα θέλετε{else}Custom made in any shape and size{/if}</li>
 						<li>{if $lang_iso=='el'}Παράδοση σε 1-3 εβδομάδες!{else}We deliver to the carrier in 1-3 weeks{/if}</li>
@@ -392,55 +392,10 @@
 					</div>
 				</div>
 				{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{$HOOK_EXTRA_RIGHT}{/if}
-				{literal}<!--{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{hook h='displayRightColumnProduct' mod='socialsharing'}{/if}-->{/literal}
-				{if !$content_only}
-					<!-- usefull links-->
-					{literal}<!--<ul id="usefull_link_block" class="clearfix no-print">
-						<li>Share this item:</li>
-						{if $HOOK_EXTRA_LEFT}{$HOOK_EXTRA_LEFT}{/if}
-						<li class="print">
-							<a class="btn btn-default social-share" id="social-print-btn" href="javascript:print();">
-								<span class="icon-print"></span>
-							</a>
-						</li>
-					</ul>-->{/literal}{literal}<!--<span class="icon-print">{l s='Print'}</span>-->{/literal}
-				{/if}
 			</div>
 			<!-- end center infos-->
 		</div> <!-- end pb-right-column-->
 	</div> <!-- end primary_block -->
-{*
-*		<div class="row">
-*		<div class="col-sm-6 col-md-3">
-*			<div class="box box-promo">
-*				<div class="row">
-*					<div class="col-xs-2"><img src="../img/cms/prod_desc/worldwide-delivery.png" alt="Free Worldwide Delivery" /></div><div class="col-xs-10"><p class="text-center">{if $lang_iso=='el'}ΔΩΡΕΑΝ ΜΕΤΑΦΟΡΙΚΑ{else}FREE WORLDWIDE DELIVERY{/if}</p></div>
-*				</div>
-*			</div>
-*		</div>
-*		<div class="col-sm-6 col-md-3">
-*			<div class="box box-promo">
-*				<div class="row">
-*					<div class="col-xs-2"><img src="../img/cms/prod_desc/superior-craftmanship.png" alt="Superior Craftsmanship" /></div><div class="col-xs-10"><p class="text-center">{if $lang_iso=='el'}ΕΞΑΙΡΕΤΙΚΗΣ ΚΑΤΑΣΚΕΥΗΣ{else}SUPERIOR CRAFTSMANSHIP{/if}</p></div>
-*				</div>
-* 		</div>
-*		</div>
-*		<div class="col-sm-6 col-md-3">
-*			<div class="box box-promo">
-*				<div class="row">
-*					<div class="col-xs-2"><img src="../img/cms/prod_desc/custom-made-products.png" alt="Tailor-made Products" /></div><div class="col-xs-10"><p class="text-center">{if $lang_iso=='el'}ΚΑΤΑ ΠΑΡΑΓΓΕΛΙΑ{else}CUSTOM MADE PRODUCTS{/if}</p></div>
-*				</div>
-*			</div>
-*		</div>
-*		<div class="col-sm-6 col-md-3">
-*			<div class="box box-promo">
-*				<div class="row">
-*					<div class="col-xs-2"><img src="../img/cms/prod_desc/natural-leather-fur.png" alt="100% Natural Leathers & Furs" /></div><div class="col-xs-10"><p class="text-center">{if $lang_iso=='el'}100% ΦΥΣΙΚΑ ΥΛΙΚΑ{else}100% NATURAL MATERIALS{/if}</p></div>
-*				</div>
-*			</div>
-*		</div>
-*	</div>
-*}
 	<div> <!-- id = sections -->
 	{if !$content_only}
 		{if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
