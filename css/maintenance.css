@@ -7,12 +7,12 @@
 #maintenance h1 {font:24px 'Roboto', sans-serif; color:#333; padding:0 0 14px 0; margin:0 0 19px 0;}
 #maintenance #message {font:14px 'Roboto', sans-serif; padding:0 0 0 18px; color:#555454; text-align:center;}
 .container {padding-right:15px; padding-left:15px; margin-right:auto; margin-left:auto;}
-  @media (min-width: 768px) {
+  @media (min-width:768px) {
     .container {width:500px;}}
-  @media (min-width: 992px) {
+  @media (min-width:992px) {
     .container {width:500px;}}
-  @media (min-width: 1200px) {
+  @media (min-width:1200px) {
     .container {width:500px;}}
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width:1200px) {
     .container {padding-left:0; padding-right:0;}}
 /*# sourceMappingURL=maintenance.css.map */

@@ -46,6 +46,7 @@
 		<!-- End Google Tag Manager -->
 		{/literal}
     <link href="//fonts.googleapis.com/css?family=Roboto:100,400&subset=cyrillic,greek" rel="stylesheet" type="text/css" media="all" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 		<!--[if IE 8]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>

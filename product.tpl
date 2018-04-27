@@ -64,7 +64,7 @@
 						{else}
 							<img id="bigpic" itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" width="{$largeSize.width}" height="{$largeSize.height}"/>
 							{if !$content_only}
-								<span class="span_link no-print hidden-xs">{l s='View larger'}</span>
+								<span class="span_link no-print hidden-xs">{*l s='View larger'*}</span>
 							{/if}
 						{/if}
 					</span>
@@ -248,6 +248,7 @@
 						<p id="quantity_wanted_p"{if (!$allow_oosp && $product->quantity <= 0) || !$product->available_for_order || $PS_CATALOG_MODE} style="display: none;"{/if}>
 							<label for="quantity_wanted">{l s='Quantity'}</label>
 							<input type="number" min="1" name="qty" id="quantity_wanted" class="text" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" />
+							<!-- mporw na valw max="{$product->quantity}" sto input gia na min paei panw apo tin apothiki -->
 							<a href="#" data-field-qty="qty" class="btn btn-default button-minus product_quantity_down">
 								<span><i class="icon-minus"></i></span>
 							</a>
@@ -322,7 +323,7 @@
 						</div>
 						<div>
 							<p class="buttons_bottom_block no-print">
-								<a href="tel:+302467024004" class="btn phoneorder">{if $lang_iso=='el'}Καλέστε μας{elseif $lang_iso=='ru'}Заказ по телефону{else}Order by phone{/if}</a>
+								<a href="tel:+302467024004" class="btn phoneorder">{if $lang_iso=='el'}Ζητήστε καλύτερη τιμή (24670 24004){elseif $lang_iso=='ru'}Запрос цитаты (+30 2467024004){else}Request a quote (+30 2467024004){/if}</a>
 							</p>
 						</div>
 						{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}
@@ -381,15 +382,19 @@
 					<ul class="text-center">
 						{if $lang_iso=='el'}<li>Τηλεφωνήστε μας για καλύτερη τιμή & ημ/νία παράδοσης</li>{/if}
 						<li>{if $lang_iso=='el'}Ράβουμε σε ότι διάσταση και σχήμα θέλετε{else}Custom made in any shape and size{/if}</li>
-						<li>{if $lang_iso=='el'}Παράδοση σε 1-3 εβδομάδες!{else}We deliver to the carrier in 1-3 weeks{/if}</li>
+						<li>{if $lang_iso=='el'}Παράδοση σε 1-3 εβδομάδες!{else}Processing time: 1-3 weeks{/if}</li>
 					</ul>
-					<div class="embed-responsive embed-responsive-4by3 visible-lg">
-						{if $lang_iso=='el'}
-						<img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cms/global_assets/dorean-apostoli.jpg" alt="Δωρεάν αποστολή σε Ελλάδα & Κύπρο" style="display: block; margin-left: auto; margin-right: auto;" width="240" height="160" data-pin-nopin="true" />
-						{else}
-						<img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cms/global_assets/free-shipping-worldwide.jpg" alt="Free worldwide shipping" style="display: block; margin-left: auto; margin-right: auto;" width="240" height="160" data-pin-nopin="true" />
+					{if isset($category) && isset($category->id_category)}
+					 	{if $category->id_category =="5" || $category->id_category =="38" || $category->id_category =="28" || $category->id_category =="40"  || $category->id_category =="10"}
+						<div class="embed-responsive embed-responsive-4by3 visible-lg">
+							{if $lang_iso=='el'}
+							<img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cms/global_assets/dorean-apostoli.jpg" alt="Δωρεάν αποστολή σε Ελλάδα & Κύπρο" style="display: block; margin-left: auto; margin-right: auto;" width="240" height="160" data-pin-nopin="true" />
+							{else}
+							<img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cms/global_assets/free-shipping-worldwide.jpg" alt="Free worldwide shipping" style="display: block; margin-left: auto; margin-right: auto;" width="240" height="160" data-pin-nopin="true" />
+							{/if}
+						</div>
+						{/if}
 					{/if}
-					</div>
 				</div>
 				{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{$HOOK_EXTRA_RIGHT}{/if}
 			</div>

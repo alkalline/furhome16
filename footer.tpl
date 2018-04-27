@@ -20,7 +20,7 @@
 					</div>
 					<div class="col-xs-12 col-sm-3">
 						<img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cms/global_assets/free-worldwide-shipping.jpg" class="img-responsive center-block grayscale" data-pin-nopin="true" /><h3 class="text-center">{if $lang_iso=='el'}Δωρεάν Μεταφορικά{else}Free shipping on all orders{/if}</h3>
-						<p>&nbsp;{if $lang_iso=='el'}Σωστά διαβάσατε! Πληρώνουμε εμείς τα έξοδα αποστολής, ώστε να έχετε ένα χαλί FUR HOME στο σπίτι ή το γραφείο σας όπου κι αν μένετε.<br>&nbsp;Σημείωση: παραδίδουμε στον μεταφορέα εντός 1-3 εβδομάδων.{else}That's right! We have eliminated the shipping costs so you can have a FUR HOME rug for your house or office no matter where you are located.<br>&nbsp;Please note: we deliver to the carrier within 1-3 weeks.{/if}</p>
+						<p>&nbsp;{if $lang_iso=='el'}Σωστά διαβάσατε! Πληρώνουμε εμείς τα έξοδα αποστολής, ώστε να έχετε ένα χαλί FUR HOME στο σπίτι ή το γραφείο σας όπου κι αν μένετε.<br>&nbsp;Σημείωση: παραδίδουμε στον μεταφορέα εντός 1-3 εβδομάδων.{else}That's right! We have eliminated the shipping costs so you can have a FUR HOME rug for your house or office no matter where you are located.<br>&nbsp;Please note: processing time is 1-3 weeks.{/if}</p>
 					</div>
 				</div><!-- #columns -->
 			</div><!-- .columns-container -->
@@ -51,7 +51,7 @@
 								{hook h='displayFooter' mod='blockcontactinfos'}
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-6 col-md-pull-3 footer-block" id="footer_map">
-								<h4>{if $lang_iso=='el'}Που θα μας βρείτε:{else}Find us on the map:{/if}</h4>
+								<h4>{if $lang_iso=='el'}Που θα μας βρείτε{elseif $lang_iso=='ru'}как нас найти{elseif $lang_iso=='de'}Anfahrt{else}How to find us{/if}</h4>
 								<a href="https://goo.gl/maps/GQ839M3fdPJ2" target="_blank" rel="nofollow"><img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/img/cms/global_assets/find-us-on-map-min.jpg" data-pin-nopin="true" class="img-responsive center-block" alt="Find FUR HOME on the map"></a>
 							</div>
 						</div>
