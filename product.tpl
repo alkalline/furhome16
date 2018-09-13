@@ -176,6 +176,16 @@
 					<div class="content_prices clearfix">
 						{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 							<!-- prices -->
+							<div class="row">
+								<div class="col-xs-9 col-sm-7 col-md-9">
+									{strip}
+										<p class="our_price_display" id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</p><span> {l s='tax excl.'}</span><br>
+										<span id="pretaxe_price">TAX FREE Shopping (* for clients outside EU)</span>
+									{/strip}
+								</div>
+								<div class="col-xs-3 col-sm-5 col-md-3" id="taxfreeblock"></div>
+							</div>
+							<hr>
 							<div>
 								<p class="our_price_display" itemprop="offers" itemscope itemtype="https://schema.org/Offer">{strip}
 									{if $product->quantity > 0}<link itemprop="availability" href="https://schema.org/InStock"/>{/if}
@@ -188,6 +198,7 @@
 										{hook h="displayProductPriceBlock" product=$product type="price"}
 									{/if}
 								{/strip}</p>
+								<span>(24% VAT included for clients inside the EU)</span><br>
 								<p id="reduction_percent" {if $productPriceWithoutReduction <= 0 || !$product->specificPrice || $product->specificPrice.reduction_type != 'percentage'} style="display:none;"{/if}>{strip}
 									<span id="reduction_percent_display">
 										{if $product->specificPrice && $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}
@@ -230,14 +241,6 @@
 								{hook h="displayProductPriceBlock" product=$product type="unit_price"}
 							{/if}
 						{/if} {*close if for show price*}
-						<div class="row">
-							<div class="col-xs-3 col-sm-5 col-md-3" id="taxfreeblock"></div>
-							<div class="col-xs-9 col-sm-7 col-md-9">
-								<p id="pretaxe_price">TAX FREE Shopping<br>(* for clients outside EU)<br>{strip}
-									<span id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</span> {l s='tax excl.'}
-								{/strip}</p>
-							</div>
-						</div>
 						{hook h="displayProductPriceBlock" product=$product type="weight" hook_origin='product_sheet'}
 						{hook h="displayProductPriceBlock" product=$product type="after_price"}
 						<div class="clear"></div>
