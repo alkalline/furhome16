@@ -177,12 +177,13 @@
 						{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 							<!-- prices -->
 							<div class="row"><!-- this is the TAX FREE div -->
-								<div class="col-xs-12 col-lg-7">
+								<div class="col-xs-6">
 									{strip}
-										<p class="taxfree_price_display" id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}<br><span class="pretaxe_price">&nbsp;{l s='tax excl.'}</span></p>
+										<p class="taxfree_price_display" id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</p>
+										<p>{l s='tax excl.'}</p>
 									{/strip}
 								</div>
-								<div class="col-xs-12 col-lg-5">
+								<div class="col-xs-6">
 									<div class="row">
 										<div class="col-xs-8">
 											<span class="pretaxe_price">TAX FREE Shopping<br>(*non-EU clients)</span>
