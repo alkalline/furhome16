@@ -176,14 +176,22 @@
 					<div class="content_prices clearfix">
 						{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 							<!-- prices -->
-							<div class="row"><!-- this is the TEX FREE div -->
-								<div class="col-xs-9 col-sm-7 col-md-9">
+							<div class="row"><!-- this is the TAX FREE div -->
+								<div class="col-xs-12 col-lg-7">
 									{strip}
-										<p class="our_price_display" id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}<span class="pretaxe_price">&nbsp;{l s='tax excl.'}</span></p>
-										<span class="pretaxe_price">TAX FREE Shopping (* for clients outside EU)</span>
+										<p class="taxfree_price_display" id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}<br><span class="pretaxe_price">&nbsp;{l s='tax excl.'}</span></p>
 									{/strip}
 								</div>
-								<div class="col-xs-3 col-sm-5 col-md-3" id="taxfreeblock"></div>
+								<div class="col-xs-12 col-lg-5">
+									<div class="row">
+										<div class="col-xs-8">
+											<span class="pretaxe_price">TAX FREE Shopping<br>(*non-EU clients)</span>
+										</div>
+										<div class="col-xs-4" id="taxfreeblock">
+											<img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/themes/furhome16/img/taxfreelogo.png" />
+										</div>
+									</div>
+								</div>
 							</div>
 							<hr>
 							<div>
@@ -198,7 +206,6 @@
 										{hook h="displayProductPriceBlock" product=$product type="price"}
 									{/if}
 								{/strip}</p>
-								<span>(24% VAT included for clients inside the EU)</span><br>
 								<p id="reduction_percent" {if $productPriceWithoutReduction <= 0 || !$product->specificPrice || $product->specificPrice.reduction_type != 'percentage'} style="display:none;"{/if}>{strip}
 									<span id="reduction_percent_display">
 										{if $product->specificPrice && $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}
