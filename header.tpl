@@ -51,6 +51,31 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+		<script>
+		window.addEventListener("load", function(){
+		window.cookieconsent.initialise({
+		  "palette": {
+		    "popup": {
+		      "background": "#eb6c44",
+		      "text": "#ffffff"
+		    },
+		    "button": {
+		      "background": "#f5d948"
+		    }
+		  },
+		  "theme": "edgeless",
+		  "position": "top",
+		  "static": true,
+		  "content": {
+		    "message": "We use cookies to ensure you get the best shopping experience.",
+		    "dismiss": "OK",
+		    "link": "Details",
+		    "href": "https://www.furhome.gr/shop/en/content/privacy-policy-12"
+		  }
+		})});
+		</script>
 	</head>
 	<body{if isset($page_name)} id="{$page_name|escape:'html':'UTF-8'}"{/if} class="{if isset($page_name)}{$page_name|escape:'html':'UTF-8'}{/if}{if isset($body_classes) && $body_classes|@count} {implode value=$body_classes separator=' '}{/if}{if $hide_left_column} hide-left-column{else} show-left-column{/if}{if $hide_right_column} hide-right-column{else} show-right-column{/if}{if isset($content_only) && $content_only} content_only{/if} lang_{$lang_iso}">
 	{literal}

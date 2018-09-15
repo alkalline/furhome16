@@ -176,11 +176,11 @@
 					<div class="content_prices clearfix">
 						{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 							<!-- prices -->
-							<div class="row">
+							<div class="row"><!-- this is the TEX FREE div -->
 								<div class="col-xs-9 col-sm-7 col-md-9">
 									{strip}
-										<p class="our_price_display" id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</p><span> {l s='tax excl.'}</span><br>
-										<span id="pretaxe_price">TAX FREE Shopping (* for clients outside EU)</span>
+										<p class="our_price_display" id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}<span class="pretaxe_price">&nbsp;{l s='tax excl.'}</span></p>
+										<span class="pretaxe_price">TAX FREE Shopping (* for clients outside EU)</span>
 									{/strip}
 								</div>
 								<div class="col-xs-3 col-sm-5 col-md-3" id="taxfreeblock"></div>
@@ -219,7 +219,7 @@
 								{/strip}</p>
 								{if $priceDisplay == 2}
 									<br />
-									<span id="pretaxe_price">{strip}
+									<span class="pretaxe_price">{strip}
 										<span id="pretaxe_price_display">{convertPrice price=$priceWithDiscountsWithoutTax}</span> {l s='tax excl.'}
 										{literal}<!--<span id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</span> {l s='tax excl.'}-->{/literal}
 									{/strip}</span>

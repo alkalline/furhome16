@@ -129,6 +129,12 @@
 				</a>
 			</li>
 			<li class="item">
+				<a href="{$link->getCMSLink('12', 'privacy-policy')|escape:'html'}" title="{l s='Privacy Policy' mod='blockcms'}">
+					{if $lang_iso=='el'}Πολιτική Απορρήτου{elseif $lang_iso=='ru'}политика конфиденциальности{else}Privacy Policy{/if}
+					{*{l s='Privacy Policy' mod='blockcms'}*}
+				</a>
+			</li>
+			<li class="item">
 				<a href="//www.furhome.gr/blog" title="Blog" target="_blank">Blog</a>
 			</li>
 			{if isset($show_contact) && $show_contact}
