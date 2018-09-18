@@ -180,33 +180,43 @@
 								<div class="col-xs-6">
 									{strip}
 										<p class="taxfree_price_display" id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</p>
-										<p>{l s='tax excl.'}</p>
 									{/strip}
 								</div>
 								<div class="col-xs-6">
 									<div class="row">
-										<div class="col-xs-8">
-											<span class="pretaxe_price">TAX FREE Shopping<br>(*non-EU clients)</span>
+										<div class="col-xs-9">
+											<p>{l s='tax excl.'}</p>
+											<span class="pretaxe_price">TAX FREE Shopping<br>{if $lang_iso=='el'}(*τιμή πώλησης για πελάτες <u>εκτός</u> Ευρωπαϊκής Ένωσης){else}(*price for clients outside the EU){/if}</span>
 										</div>
-										<div class="col-xs-4" id="taxfreeblock">
-											<img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/themes/furhome16/img/taxfreelogo.png" />
+										<div class="col-xs-3" id="taxfreeblock">
+											<img src="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}/themes/furhome16/img/taxfreelogo.png" class="img-responsive" />
 										</div>
 									</div>
 								</div>
 							</div>
 							<hr>
 							<div>
-								<p class="our_price_display" itemprop="offers" itemscope itemtype="https://schema.org/Offer">{strip}
-									{if $product->quantity > 0}<link itemprop="availability" href="https://schema.org/InStock"/>{/if}
-									{if $priceDisplay >= 0 && $priceDisplay <= 2}
-										<span id="our_price_display" class="price" itemprop="price" content="{$productPrice}">{convertPrice price=$productPrice|floatval}</span>
-										{if $tax_enabled  && ((isset($display_tax_label) && $display_tax_label == 1) || !isset($display_tax_label))}
-											{if $priceDisplay == 1} {l s='tax excl.'}{else} {l s='tax incl.'}{/if}
-										{/if}
-										<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
-										{hook h="displayProductPriceBlock" product=$product type="price"}
-									{/if}
-								{/strip}</p>
+								<div class="row">
+									<div class="col-xs-6">
+										<p class="our_price_display" itemprop="offers" itemscope itemtype="https://schema.org/Offer">{strip}
+											{if $product->quantity > 0}<link itemprop="availability" href="https://schema.org/InStock"/>{/if}
+											{if $priceDisplay >= 0 && $priceDisplay <= 2}
+												<span id="our_price_display" class="price" itemprop="price" content="{$productPrice}">{convertPrice price=$productPrice|floatval}</span>
+												{if $tax_enabled  && ((isset($display_tax_label) && $display_tax_label == 1) || !isset($display_tax_label))}
+													{if $priceDisplay == 1} {l s='tax excl.'}{else} {l s='tax incl.'}{/if}
+												{/if}
+												<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
+												{hook h="displayProductPriceBlock" product=$product type="price"}
+											{/if}
+										{/strip}</p>
+									</div>
+									<div class="row"><div class="col-xs-6">
+										<p>
+											<span class="pretaxe_price">{l s='tax incl.'}<br>{if $lang_iso=='el'}(*τιμή πώλησης για πελάτες <u>εντός</u> Ευρωπαϊκής Ένωσης){else}(*price for clients inside the EU){/if}</span>
+										</p>
+									</div>
+								</div>
+								<div class="col-xs-6">
 								<p id="reduction_percent" {if $productPriceWithoutReduction <= 0 || !$product->specificPrice || $product->specificPrice.reduction_type != 'percentage'} style="display:none;"{/if}>{strip}
 									<span id="reduction_percent_display">
 										{if $product->specificPrice && $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}
@@ -232,6 +242,8 @@
 										{literal}<!--<span id="pretaxe_price_display">{convertPrice price=$product->getPrice(false, $smarty.const.NULL)}</span> {l s='tax excl.'}-->{/literal}
 									{/strip}</span>
 								{/if}
+								</div>
+								<div class="col-xs-6"></div></div>
 							</div> <!-- end prices -->
 							{if $packItems|@count && $productPrice < $product->getNoPackPrice()}
 								<p class="pack_price">{l s='Instead of'} <span style="text-decoration: line-through;">{convertPrice price=$product->getNoPackPrice()}</span></p>

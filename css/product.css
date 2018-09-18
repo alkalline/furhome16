@@ -386,29 +386,29 @@ table.table-product-discounts tr th {border-left:1px solid #d6d4d4; border-top:1
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fbfbfb',GradientType=0 );}
 
 /* prices */
-.content_prices {padding:13px 19px;}
+.content_prices {padding:13px 19px; text-align: right;}
 .discount {display:none;}
-.our_price_display {font-weight:600; font-size:29px; line-height:32px; font-family:'Roboto', sans-serif; color:#333;}
-  @media (max-width:991px) {
-    .our_price_display {font-size:26px; line-height:28px;}}
-.our_price_display .price {font-weight:600; font-size:29px; line-height:32px; color:#000;}
-  @media (max-width:991px) {
-    .our_price_display .price {font-size:26px; line-height:28px;}}
-.taxfree_price_display {font-weight:600; font-size:29px; line-height:32px; font-family:'Roboto', sans-serif; color:#444;}
-  @media (max-width:991px) {
-    .taxfree_price_display {font-size:26px; line-height:28px;}}
-.taxfree_price_display .price {font-weight:600; font-size:29px; line-height:32px; color:#444;}
-  @media (max-width:991px) {
-    .taxfree_price_display .price {font-size:26px; line-height:28px;}}
+.our_price_display {font-weight:400; font-size:22px; line-height:32px; font-family:'Roboto', sans-serif; color:#333; text-align: right;}
+  @media (max-width:1024px) {
+    .our_price_display {font-size:16px; line-height:28px;}}
+.our_price_display .price {font-weight:400; font-size:22px; line-height:32px; color:#000;}
+  @media (max-width:1024px) {
+    .our_price_display .price {font-size:16px; line-height:28px;}}
+.taxfree_price_display {font-weight:600; font-size:28px; line-height:32px; font-family:'Roboto', sans-serif; color:#333; text-align: right;}
+  @media (max-width:1024px) {
+    .taxfree_price_display {font-size:19px; line-height:28px;}}
+.taxfree_price_display .price {font-weight:600; font-size:28px; line-height:32px; color:#333;}
+  @media (max-width:1024px) {
+    .taxfree_price_display .price {font-size:19px; line-height:28px;}}
 /*#taxfreeblock{background:url('../img/taxfreelogo.png') no-repeat; background-position:100% 0%; height:64px;}*/
 #taxfreeblock {padding: 0;}
-.pretaxe_price{font-family: sans-serif; font-size:10px; text-align: right; display: block !important;}
+.pretaxe_price{font-family: sans-serif; font-size:10px; line-height: 12px; text-align: left; display: block !important;}
   /*@media (min-width:1459px) {
     .pretaxe_price{padding-top:12px;}}*/
 p #pretaxe_price_display .our_price_display {color: #777;}
 #old_price {padding-bottom:15px; font-size:13px; text-decoration:line-through; font-family:'Roboto', sans-serif; line-height:23px; display:inline-block;}
 #reduction_percent,
-#reduction_amount {margin-right:10px; padding:1px 2px; font-weight:600; font-family:'Roboto', sans-serif; font-size:21px; line-height:23px; color:#fff; background:#f13340; border:1px solid #d02a2c;}
+#reduction_amount {margin-right:10px; padding:1px 2px; font-weight:600; font-family:'Roboto', sans-serif; font-size:19px; line-height:21px; color:#fff; background:#f13340; border:1px solid #d02a2c;}
 #reduction_percent span, #reduction_amount span {display:block;}
 .hide-left-column.hide-right-column #reduction_percent, .hide-left-column.hide-right-column #reduction_amount {display:inline-block;}
 
@@ -502,7 +502,6 @@ ul#uploadable_files, ul#text_fields {list-style-type:none;}
   #product.content_only section.primary_block div.pb-right-column .box-info-product {border-top-width:1px; min-height:1px;}}
 
 .padd-desc {padding:5% !important;}
-
 /***** IE code ****/
 .ie8 .pb-left-column #image-block #view_full_size .span_link {background:#fff; border:1px solid #d6d4d4;}
 .ie8 .box-security {filter:none;}
